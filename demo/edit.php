@@ -4,11 +4,18 @@ require 'C:\xampp\htdocs\week6\libs\Smarty.class.php';
 
 $smarty = new Smarty;
 
-$id = $_GET['id'];
+//Define Variable
+$id = ''; 
+$value='';
 
-//select everything from the table page
+if(isset($_GET['id'])) 
+{
+    $id = $_GET['id']; 
+} 
+
+//select everything from the table based on 'id'
 $result = mysql_query("SELECT * FROM student WHERE id='$id' ")
-or die(mysql_error()); 
+		  or die(mysql_error()); 
 
 if($result)
 {	
@@ -17,7 +24,6 @@ if($result)
 		$value[] = $res;
 	}; 
 	$smarty->assign('value', $value);
-
 	// Display the edit page through the edit template
 	$smarty->display('edit.tpl');
 }

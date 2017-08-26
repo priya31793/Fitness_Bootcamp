@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 {include file="header.tpl"}
 	<div class="header">
@@ -32,7 +31,6 @@
 		</div>
 	</div>
 
-	
 	<div class="register-container container">
 		<div class="row">
 			<div class="iphone span5">
@@ -67,7 +65,7 @@
 					</tr>
 					<tr>
 						<td><input type="hidden" name="id" value="{$value[value].id}"></td>
-						<td><button type="submit" name="update" value="Update">Update</button></td>
+						<td><button type="submit" name="update" value="update">Update</button></td>
 					</tr>
 				</table>
 				{/section}
@@ -75,13 +73,11 @@
 	   </div>
      </div>
     </div>
-{include file="footer.tpl"}
-
+	{include file="footer.tpl"}
 	<!-- Javascript -->
 	<script src="assets/js/jquery-1.8.2.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.backstretch.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-	
     </body>
 </html>

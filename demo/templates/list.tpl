@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 {include file="header.tpl"}
 <div class="header">
@@ -26,13 +25,12 @@
 				</div>
 				<div class="links span8">
 					<a class="home" href="index.php" rel="tooltip" data-placement="bottom" data-original-title="Home"></a>
-					<a class="blog" href="update.php" rel="tooltip" data-placement="bottom" data-original-title="Update Feedback"></a>
+					<a class="blog" href="list.php" rel="tooltip" data-placement="bottom" data-original-title="Update Feedback"></a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	
 	<div class="register-container container" style="" >
 		<div class="row" >
 			<div class="register" style="background-color:white;" >	  
@@ -63,13 +61,11 @@
 		</div>
 	</div>
 </div>		
-{include file="footer.tpl"}
-
+	{include file="footer.tpl"}
 	<!-- Javascript -->
 	<script src="assets/js/jquery-1.8.2.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/js/jquery.backstretch.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
-	
     </body>
 </html>
