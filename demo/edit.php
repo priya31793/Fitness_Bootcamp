@@ -1,5 +1,4 @@
 <?php
-
 /* This is a file which abstracts the DB connecting functionality */
 include("db_connection.php");
 /* These are the smarty files */
@@ -17,8 +16,7 @@ if(isset($_GET['id']))
 } 
 
 /* select everything from student table based on 'id' */
-$result = mysql_query("SELECT * FROM student WHERE id='$id' ")
-		  or die(mysql_error()); 
+$result = mysql_query("SELECT * FROM student WHERE id='$id' ") or die(mysql_error()); 
 
 if($result)
 {	
@@ -30,5 +28,4 @@ if($result)
 	/* Display the edit page through the edit template */
 	$smarty->display('edit.tpl');
 }
-
 ?>

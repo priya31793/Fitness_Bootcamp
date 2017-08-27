@@ -1,5 +1,4 @@
 <?php 
-
 /* This is a file which abstracts the DB connecting functionality */
 include("db_connection.php");
 /* These are the smarty files */
@@ -14,8 +13,4 @@ $smarty->caching = true;
 
 /* Display the home page through the index template */
 $smarty->display('index.tpl');
-
-
-
-
 ?>

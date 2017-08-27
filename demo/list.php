@@ -1,5 +1,4 @@
 <?php
-
 /* This is a file which abstracts the DB connecting functionality */
 include("db_connection.php");
 /* These are the smarty files */
@@ -23,6 +22,5 @@ if($result)
 	$smarty->assign('value', $value);
 	/* Display the list page through the list template */
 	$smarty->display('list.tpl');
-}
-				
+}				
 ?>
