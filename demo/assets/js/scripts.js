@@ -20,48 +20,42 @@ jQuery(document).ready(function()
         Form validation
     */
     $('.register form').submit(function(){
-        $(this).find("label[for='name']").html('name');
-        $(this).find("label[for='email']").html('email');
-        $(this).find("label[for='add']").html('add');
-        $(this).find("label[for='city']").html('city');
-		$(this).find("label[for='state']").html('state');
-        $(this).find("label[for='feedback']").html('feedback');
+        $(this).find("label[for='Name']").html('name');
+        $(this).find("label[for='Email']").html('email');
+        $(this).find("label[for='Address']").html('address');
+        $(this).find("label[for='City']").html('city');
+		$(this).find("label[for='State']").html('state');
+        $(this).find("label[for='Feedback']").html('feedback');
 
         var name = $(this).find('input#name').val();
         var email = $(this).find('input#email').val();
-        var add = $(this).find('input#add').val();
+        var address = $(this).find('input#address').val();
 		var city = $(this).find('input#city').val();
         var state = $(this).find('input#state').val();
         var feedback = $(this).find('input#feedback').val();
-		var name = $(this).find('input#name').val();
-		var letters = /^[A-Za-z]+$/; 
 		
-        if(name.value.match(letters))
+        if(name == '')
 		{  
-			return true;  
-		}  
-		else
-		{  
-			$(this).find("label[for='name']").append("<span style='display:none' class='red'> Invalid Characters</span>");
-            $(this).find("label[for='name'] span").fadeIn('medium'); 
+			$(this).find("label[for='Name']").append("<span style='display:none' class='red'> Invalid Characters</span>");
+            $(this).find("label[for='Name'] span").fadeIn('medium'); 
 			return false;  
 		}
         if(email == '') 
 		{
-            $(this).find("label[for='email']").append("<span style='display:none' class='red'> - Please enter your Email.</span>");
-            $(this).find("label[for='email'] span").fadeIn('medium');
+            $(this).find("label[for='Email']").append("<span style='display:none' class='red'> - Please Enter your Email.</span>");
+            $(this).find("label[for='Email'] span").fadeIn('medium');
             return false;
 		}
-        if(add == '') 
+        if(address == '') 
 		{
-            $(this).find("label[for='add']").append("<span style='display:none' class='red'> - Please enter a valid Address.</span>");
-            $(this).find("label[for='add'] span").fadeIn('medium');
+            $(this).find("label[for='Address']").append("<span style='display:none' class='red'> - Please Enter a valid Address.</span>");
+            $(this).find("label[for='Address'] span").fadeIn('medium');
             return false;
         }
         if(feedback == '') 
 		{
-            $(this).find("label[for='feedback']").append("<span style='display:none' class='red'> - Please enter your comments.</span>");
-            $(this).find("label[for='feedback'] span").fadeIn('medium');
+            $(this).find("label[for='Feedback']").append("<span style='display:none' class='red'> - Please Enter your comments.</span>");
+            $(this).find("label[for='Feedback'] span").fadeIn('medium');
             return false;
         } 
     });

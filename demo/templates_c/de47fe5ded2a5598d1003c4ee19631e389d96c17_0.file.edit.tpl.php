@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-08-26 08:33:02
+/* Smarty version 3.1.30, created on 2017-08-27 07:29:05
   from "C:\xampp\htdocs\week6\demo\templates\edit.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59a1161e4d9c89_56903618',
+  'unifunc' => 'content_59a258a189af24_35057983',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'de47fe5ded2a5598d1003c4ee19631e389d96c17' => 
     array (
       0 => 'C:\\xampp\\htdocs\\week6\\demo\\templates\\edit.tpl',
-      1 => 1503729168,
+      1 => 1503807771,
       2 => 'file',
     ),
   ),
@@ -22,29 +22,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_59a1161e4d9c89_56903618 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59a258a189af24_35057983 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-		<title><?php echo $_smarty_tpl->tpl_vars['page_title']->value;?>
-</title>
-        <meta charset="utf-8">
-        <title>Parents Queries</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <!-- CSS -->
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700'>
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
-<?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+	<?php $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
+<body>
 	<div class="header">
 		<div class="container">
 			<div class="row">
@@ -55,19 +40,18 @@ function content_59a1161e4d9c89_56903618 (Smarty_Internal_Template $_smarty_tpl)
 				</div>
 				<div class="links span8">
 					<a class="home" href="index.php" rel="tooltip" data-placement="bottom" data-original-title="Home"></a>
-					<a class="blog" href="update.php" rel="tooltip" data-placement="bottom" data-original-title="Update Feedback"></a>
+					<a class="blog" href="list.php" rel="tooltip" data-placement="bottom" data-original-title="Update Contact"></a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	
 	<div class="register-container container">
 		<div class="row">
 			<div class="iphone span5">
 				<img src="assets/img/iphone.png" alt="">
 			</div>
-			<div class="register span6">
+		<div class="register span6">
 			<form name="form1" method="post" action="update.php">
 				<h2>  
 					<span class="red"><strong>Update Your Info</strong></span>
@@ -93,7 +77,7 @@ for ($__section_value_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_
 					</tr>
 					<tr> 
 						<td>Address</td>
-						<td><input type="text" name="add" value="<?php echo $_smarty_tpl->tpl_vars['value']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_value']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_value']->value['index'] : null)]['address'];?>
+						<td><input type="text" name="address" value="<?php echo $_smarty_tpl->tpl_vars['value']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_value']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_value']->value['index'] : null)]['address'];?>
 "></td>
 					</tr>
 					<tr> 
@@ -120,27 +104,12 @@ $_smarty_tpl->tpl_vars['__smarty_section_value'] = $__section_value_0_saved;
 }
 ?>
 			</form>
-	   </div>
-     </div>
+		</div>
+		</div>
     </div>
-<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+	<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-
-	<!-- Javascript -->
-	<?php echo '<script'; ?>
- src="assets/js/jquery-1.8.2.min.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- src="assets/bootstrap/js/bootstrap.min.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- src="assets/js/jquery.backstretch.min.js"><?php echo '</script'; ?>
->
-	<?php echo '<script'; ?>
- src="assets/js/scripts.js"><?php echo '</script'; ?>
->
-	
     </body>
 </html><?php }
 }

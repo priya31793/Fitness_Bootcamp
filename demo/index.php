@@ -1,9 +1,9 @@
 <?php 
-// These are the smarty files
-require 'C:\xampp\htdocs\week6\libs\Smarty.class.php';
 
-// This is a file which abstracts the DB connecting functionality (Check out PEAR)
-include("config.php");
+/* This is a file which abstracts the DB connecting functionality */
+include("db_connection.php");
+/* These are the smarty files */
+require 'C:\xampp\htdocs\week6\libs\Smarty.class.php';
 
 $smarty = new Smarty;
 
@@ -12,7 +12,10 @@ $smarty->debugging = false;
 $smarty->use_sub_dirs = false;
 $smarty->caching = true; 
 
-// Display the index page through the index template
+/* Display the home page through the index template */
 $smarty->display('index.tpl');
+
+
+
 
 ?>

@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-		<title>{$page_title}</title>
-        <meta charset="utf-8">
-        <title>Parents Queries</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <!-- CSS -->
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700'>
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-</head>
+	{include file="header.tpl"}
 <body>
-{include file="header.tpl"}
 	<div class="header">
 		<div class="container">
 			<div class="row">
@@ -25,7 +12,7 @@
 				</div>
 				<div class="links span8">
 					<a class="home" href="index.php" rel="tooltip" data-placement="bottom" data-original-title="Home"></a>
-					<a class="blog" href="update.php" rel="tooltip" data-placement="bottom" data-original-title="Update Feedback"></a>
+					<a class="blog" href="list.php" rel="tooltip" data-placement="bottom" data-original-title="Update Contact"></a>
 				</div>
 			</div>
 		</div>
@@ -36,7 +23,7 @@
 			<div class="iphone span5">
 				<img src="assets/img/iphone.png" alt="">
 			</div>
-			<div class="register span6">
+		<div class="register span6">
 			<form name="form1" method="post" action="update.php">
 				<h2>  
 					<span class="red"><strong>Update Your Info</strong></span>
@@ -53,7 +40,7 @@
 					</tr>
 					<tr> 
 						<td>Address</td>
-						<td><input type="text" name="add" value="{$value[value].address}"></td>
+						<td><input type="text" name="address" value="{$value[value].address}"></td>
 					</tr>
 					<tr> 
 						<td>City</td>
@@ -70,14 +57,9 @@
 				</table>
 				{/section}
 			</form>
-	   </div>
-     </div>
+		</div>
+		</div>
     </div>
 	{include file="footer.tpl"}
-	<!-- Javascript -->
-	<script src="assets/js/jquery-1.8.2.min.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.backstretch.min.js"></script>
-	<script src="assets/js/scripts.js"></script>
     </body>
 </html>
