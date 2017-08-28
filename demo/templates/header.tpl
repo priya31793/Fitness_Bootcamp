@@ -11,6 +11,7 @@
         <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700'>
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 </HEAD>
 <BODY bgcolor="#ffffff">

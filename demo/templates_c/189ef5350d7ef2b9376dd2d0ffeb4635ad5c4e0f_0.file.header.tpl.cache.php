@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-08-27 06:05:01
+/* Smarty version 3.1.30, created on 2017-08-28 05:58:45
   from "C:\xampp\htdocs\week6\demo\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59a244edb01f88_82005326',
+  'unifunc' => 'content_59a394f591b230_02620692',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '189ef5350d7ef2b9376dd2d0ffeb4635ad5c4e0f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\week6\\demo\\templates\\header.tpl',
-      1 => 1503806685,
+      1 => 1503892591,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_59a244edb01f88_82005326 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '733659a244edafbe12_87923449';
+function content_59a394f591b230_02620692 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '1240659a394f58e7456_66072634';
 ?>
 <HTML>
 <HEAD>
@@ -36,6 +36,7 @@ $_smarty_tpl->compiled->nocache_hash = '733659a244edafbe12_87923449';
         <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700'>
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 </HEAD>
 <BODY bgcolor="#ffffff">

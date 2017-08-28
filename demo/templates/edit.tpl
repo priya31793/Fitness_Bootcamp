@@ -29,32 +29,18 @@
 					<span class="red"><strong>Update Your Info</strong></span>
 				</h2>
 				{section name=value loop=$value}
-				<table border="0">
-					<tr> 
-						<td>Name</td>
-						<td><input type="text" name="name" value="{$value[value].name}"></td>
-					</tr>
-					<tr> 
-						<td>Email</td>
-						<td><input type="email" name="email" value="{$value[value].email}"></td>
-					</tr>
-					<tr> 
-						<td>Address</td>
-						<td><input type="text" name="address" value="{$value[value].address}"></td>
-					</tr>
-					<tr> 
-						<td>City</td>
-						<td><input type="text" name="city" value="{$value[value].city}"></td>
-					</tr>
-					<tr> 
-						<td>State</td>
-						<td><input type="text" name="state" value="{$value[value].state}"></td>
-					</tr>
-					<tr>
-						<td><input type="hidden" name="id" value="{$value[value].id}"></td>
-						<td><button type="submit" name="update" value="update">Update</button></td>
-					</tr>
-				</table>
+					<label for="Name">Name</label>
+					<input type="text" id="name" name="name" placeholder="Enter your Name..." value="{$value[value].name}">
+					<label for="Email">Email</label>
+					<input type="email" id="email" name="email" placeholder="Enter your Email..." value="{$value[value].email}">
+					<label for="Address">Address</label>
+					<input type="text" id="address" name="address" placeholder="Enter your Address..." value="{$value[value].address}">
+					<label for="City">City</label>
+					<input type="text" id="city" name="city" placeholder="Enter your City..." value="{$value[value].city}">
+					<label for="State">State</label>
+					<input type="text" id="state" name="state" placeholder="Enter your State..." value="{$value[value].state}">
+					<input type="hidden" name="id" value="{$value[value].id}">
+					<button type="submit" name="update" value="update">Update</button>				
 				{/section}
 			</form>
 		</div>

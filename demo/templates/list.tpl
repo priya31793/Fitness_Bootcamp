@@ -31,6 +31,7 @@
 						<th>State</th>
 						<th>Comments</th>
 						<th>Edit</th>
+						<th>Delete</th>
 					</tr>
 				</thead>
 				{section name=value loop=$value}
@@ -41,7 +42,8 @@
 				  <td>{$value[value].city}</td>
 				  <td>{$value[value].state}</td>
 				  <td>{$value[value].feedback}</td>
-				  <td><a href="edit.php?id={$value[value].id}">Edit</a></td>
+				  <td><a href="edit.php?id={$value[value].id}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+				  <td><a href="delete.php?id={$value[value].id}"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
 				</tr>
 				{/section} 
 			</table>

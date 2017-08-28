@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-08-27 06:24:41
+/* Smarty version 3.1.30, created on 2017-08-28 06:14:20
   from "C:\xampp\htdocs\week6\demo\templates\list.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59a24989819c69_80322310',
+  'unifunc' => 'content_59a3989c5b3dd8_57552135',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '34a2e6736827f200e3e86f77f4f44884cda9a2ac' => 
     array (
       0 => 'C:\\xampp\\htdocs\\week6\\demo\\templates\\list.tpl',
-      1 => 1503807774,
+      1 => 1503893654,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_59a24989819c69_80322310 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59a3989c5b3dd8_57552135 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,6 +59,7 @@ function content_59a24989819c69_80322310 (Smarty_Internal_Template $_smarty_tpl)
 						<th>State</th>
 						<th>Comments</th>
 						<th>Edit</th>
+						<th>Delete</th>
 					</tr>
 				</thead>
 				<?php
@@ -83,7 +84,9 @@ for ($__section_value_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_
 				  <td><?php echo $_smarty_tpl->tpl_vars['value']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_value']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_value']->value['index'] : null)]['feedback'];?>
 </td>
 				  <td><a href="edit.php?id=<?php echo $_smarty_tpl->tpl_vars['value']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_value']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_value']->value['index'] : null)]['id'];?>
-">Edit</a></td>
+"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+				  <td><a href="delete.php?id=<?php echo $_smarty_tpl->tpl_vars['value']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_value']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_value']->value['index'] : null)]['id'];?>
+"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
 				</tr>
 				<?php
 }

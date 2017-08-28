@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-08-27 07:26:18
+/* Smarty version 3.1.30, created on 2017-08-28 05:58:45
   from "C:\xampp\htdocs\week6\demo\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59a257fa422527_13315088',
+  'unifunc' => 'content_59a394f5a4aa12_77613601',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8b5dd5c0cc1d14a5d69015c3bbd2b1235043140c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\week6\\demo\\templates\\index.tpl',
-      1 => 1503811491,
+      1 => 1503812049,
       2 => 'file',
     ),
     '189ef5350d7ef2b9376dd2d0ffeb4635ad5c4e0f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\week6\\demo\\templates\\header.tpl',
-      1 => 1503806685,
+      1 => 1503892591,
       2 => 'file',
     ),
     '162423f2e6c5562d8ff6df28cee1b5316ad029aa' => 
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_59a257fa422527_13315088 (Smarty_Internal_Template $_smarty_tpl) {
+function content_59a394f5a4aa12_77613601 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,6 +47,7 @@ function content_59a257fa422527_13315088 (Smarty_Internal_Template $_smarty_tpl)
         <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700'>
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 </HEAD>
 <BODY bgcolor="#ffffff">
@@ -95,7 +96,6 @@ function content_59a257fa422527_13315088 (Smarty_Internal_Template $_smarty_tpl)
 			</div>
 		</div>
 	</div>
-	
 		<!-- Javascript -->
 	<script src="assets/js/jquery-1.8.2.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>

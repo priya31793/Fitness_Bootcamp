@@ -3,21 +3,24 @@
 include("database.php");
 /* These are the smarty files */
 require '..\libs\Smarty.class.php';
+
 $smarty = new Smarty;
+
 /* Define Variable */
-$id = '';
- 
-if(isset($_POST['id'])) 
+$id = ''; 
+$value='';
+
+if(isset($_GET['id'])) 
 {
-	$id = $_POST['id']; 
+    $id = $_GET['id']; 
 } 
-if(isset($_POST['delete']))
-{    
-	/* delete */ 
-	$result = mysql_query("delete from  student WHERE id='$id' ") or die(mysql_error()); 
-	if($result)
-	{
-		echo "<script>window.location='index.php';</script>";
-	}
-}		
+ 
+/* delete */ 
+$result = mysql_query("delete from student WHERE id='$id' ") or die(mysql_error());
+	 
+if($result)
+{
+	echo "<script>window.location='list.php';</script>";
+}
+		
 ?>
