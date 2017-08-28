@@ -1,65 +1,34 @@
-#Smarty 3 template engine
-##Distribution repository
+# Technology Stack
 
-> Smarty 3.1.28 introduces run time template inheritance
+1.Smarty 3 template engine (Frontend)
+2.PHP (Backend)
+3.MySQL
+4.Javascript
+5.Bootstrap
+6.NetBeans (Editor)
+7.Xampp Server (Testing)
 
-> Read the NEW_FEATURES and INHERITANCE_RELEASE_NOTES file for recent extensions to Smarty 3.1 functionality
+1.Smarty 3 template engine (Frontend)
 
-Smarty versions 3.1.11 or later are now on github and can be installed with Composer.
-
-
+Smarty versions 3.1.11 
 The "smarty/smarty" package will start at libs/....   subfolder.
 
-To get the latest stable version of Smarty 3.1 use
+2.Database Connection (Database.php)
 
-```json
-"require": {
-    "smarty/smarty": "~3.1"
-}
-```
+3.MySQL:
+Created a DB (test) in MySQL & created a table name (Student).
 
-in your composer.json file.
+4.JS:
+Done Form validations using Javascript.
+Path : ..\demo\assets\js\scripts.js\scripts
 
-To get the trunk version use
+5.Bootstrap:
+Path: ..\demo\assets\bootstrap
 
-```json
-"require": {
-    "smarty/smarty": "~3.1@dev"
-}
-```
+6.PHP
+All the backend logic & persistance code storage are written in PHP 
 
-For a specific version use something like
+7.View:
+Frontend part can be viewed in Templates. We have added all the CSS in header.tpl & script code in Footer.tpl
+...\demo\templates
 
-```json
-"require": {
-    "smarty/smarty": "3.1.19"
-}
-```
-
-PHPUnit test can be installed by corresponding composer entries like
-
-```json
-"require": {
-    "smarty/smarty-phpunit": "3.1.19"
-}
-```
-
-Similar applies for the lexer/parser generator
-
-```json
-"require": {
-    "smarty/smarty-lexer": "3.1.19"
-}
-```
-
-Or you could use
-
-```json
-"require": {
-    "smarty/smarty-dev": "3.1.19"
-}
-```
-
-Which is a wrapper to install all 3 packages
-
-Composer can also be used for Smarty2 versions 2.6.24 to 2.6.28
