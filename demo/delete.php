@@ -1,6 +1,6 @@
 <?php
 /* This is a file which abstracts the DB connecting functionality */
-include("db_connection.php");
+include("database.php");
 /* These are the smarty files */
 require '..\libs\Smarty.class.php';
 $smarty = new Smarty;
