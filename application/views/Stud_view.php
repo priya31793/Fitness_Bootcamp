@@ -12,7 +12,7 @@
 	
    <body> 
    <div id="header">
-		<h1><a href="index.html">Boot &amp; Camp <span> Gym</span></a></h1>
+		<h1><a href="index.html">Boot Camp <span> Gym</span></a></h1>
 		<ul id="navigation">
 			<li>
 				<a href="index.html">Home</a>
@@ -29,10 +29,10 @@
 				</ul>
 			</li>
 			<li class="current">
-				<a href="contact.html">Contact</a>
+				<a href="../stud/add_view">Classes</a>
 			</li>
 			<li>
-				<a href="blog.html">Blog</a>
+				<a href="view">View</a>
 			</li>
 		</ul>
 	</div>
@@ -48,7 +48,8 @@
             echo "<td>Address</td>"; 
             echo "<td>City</td>"; 
             echo "<td>State</td>"; 
-            echo "<td>Feedback</td>"; 
+            echo "<td>Feedback</td>";
+            echo "<td>Edit</td>"; 
             echo "<td>Delete</td>"; 
             echo "</tr>"; 
 				
@@ -61,6 +62,8 @@
 			   echo "<td>".$r->city."</td>"; 
 			   echo "<td>".$r->state."</td>"; 
 			   echo "<td>".$r->feedback."</td>"; 
+			   echo "<td><a href = '".base_url()."index.php/stud/edit/".$r->id."'>Edit</a></td>"; 
+
                echo "<td><a href = '".base_url()."index.php/stud/delete/".$r->id."'>Delete</a></td>"; 
                echo "</tr>"; 
             } 

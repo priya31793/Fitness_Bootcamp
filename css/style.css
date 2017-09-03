@@ -235,7 +235,7 @@ p a:hover {
 #body form label span {
 	display: block;
 	line-height: 27px;
-	padding: 0 0 5px
+	padding: 0 0 5px;
 }
 #body form label input {
 	background: #d1d3d4;
@@ -413,4 +413,8 @@ p a:hover {
 	height: 30px;
 	margin: 0 0 0 23px;
 	width: 30px;
+}
+#body form label span.error {
+	color:red;
+	font-size:15px;
 }

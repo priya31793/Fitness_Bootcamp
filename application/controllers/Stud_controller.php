@@ -9,6 +9,7 @@
   
       public function index() { 
 	     $this->load->library('table');
+		 $this->load->library('form_validation');
 		 $this->db->group_by("name");
          $query = $this->db->get("student"); 
          $data['records'] = $query->result(); 
@@ -23,54 +24,71 @@
       } 
   
       public function add_student() { 
-         $this->load->model('Stud_Model');
-         $data = array( 
-			'name' => $this->input->post('name'),
-            'email' => $this->input->post('email'), 
-            'address' => $this->input->post('address'),
+		 
+		$this->load->library('form_validation');
+		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+		//Validating Name Field
+		$this->form_validation->set_rules('name', 'Name', 'required|min_length[5]|max_length[15]');
+		//Validating Email Field
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+		//Validating Address Field
+		$this->form_validation->set_rules('address', 'Address', 'required|min_length[10]|max_length[50]');
+		//Validating Feedback. Field
+		$this->form_validation->set_rules('feedback', 'Feedback.', 'required|min_length[10]|max_length[150]');
+		 
+        $data = array( 
+			'name' => $this->input->post('name',TRUE),
+            'email' => $this->input->post('email',TRUE), 
+            'address' => $this->input->post('address',TRUE),
 			'city' => $this->input->post('city'),
 			'state' => $this->input->post('state'),
-			'feedback' => $this->input->post('feedback')			
+			'feedback' => $this->input->post('feedback',TRUE)			
          ); 
+		 
+		if ($this->form_validation->run() === FALSE)
+        {
+            $this->load->view('stud_add', $data);
+        }
+        else
+        {
+         $this->load->model('Stud_Model');
+         $this->db->group_by("name");
          $q = $this->Stud_Model->insert($data); 
 		 $this->db->group_by("name");
-
          $query = $this->db->get("student"); 
-         $data['records'] = $query->result(); 
-		 if ($q) {
-                $data['message'] = '<h3> Your report has successfully submitted!</h3>';
-                $data['success'] = '';
-                $data['class'] = 'collapse';
-				$this->load->view('Stud_view', $data);
-            } else {
-                $data['message'] = '<h3> Report submission unsuccessful!</h3>';
-                $data['success'] = '';
-                $data['class'] = 'collapse';
-                $this->load->view('Stud_view', $data);
-            } 
+         $data['records'] = $query->result();
+		 $this->load->view('Stud_view', $data);
+        }
       } 
   
-      public function update_student_view() { 
-         $this->load->helper('form'); 
-         $id = $this->uri->segment('3'); 
-         $query = $this->db->get("student",array("id"=>$id));
-         $data['records'] = $query->result(); 
-         $data['id'] = $id; 
-         $this->load->view('Stud_edit',$data); 
+	  public function update_student_view() { 
+		  $this->load->helper('form'); 
+		  $id = $this->uri->segment('3'); 
+		  $this->db->where("id", $id); 
+		  $this->db->group_by("name");
+          $query = $this->db->get("student");
+          $data['records'] = $query->result(); 
+          $this->load->view('Stud_edit',$data); 
       } 
   
       public function update_student(){ 
-		  $this->load->model('Stud_Model');
-		  $id = $this->input->post('id'); 
           $data = array( 
 				'name' => $this->input->post('name'),
 				'email' => $this->input->post('email'), 
 				'address' => $this->input->post('address'),
 				'city' => $this->input->post('city'),
 				'state' => $this->input->post('state'),
-				'feedback' => $this->input->post('feedback')			
+				//'feedback' => $this->input->post('feedback')			
 			);
-         $this->Stud_Model->update($data,$id); 
+		
+		 $id = $this->input->post('id'); 
+		 $this->load->model('Stud_Model');
+         $this->Stud_Model->update($data,$id);
+		 $this->db->group_by("name");
+		 $query = $this->db->get("student"); 
+         $data['records'] = $query->result();
+		 $this->load->view('Stud_view', $data);
+		 redirect(Stud_controller);
       } 
   
       public function delete_student() { 

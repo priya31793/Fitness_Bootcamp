@@ -6,7 +6,6 @@
       } 
    
       public function insert($data) {
-		 $this->db->where('name is NOT NULL', NULL, FALSE);
          if ($this->db->insert("student", $data)) { 
             return true; 
          } 
