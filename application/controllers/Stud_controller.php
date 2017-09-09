@@ -24,7 +24,7 @@
       } 
   
       public function add_student() { 
-		 
+		 $this->load->model('Stud_Model');
 		$this->load->library('form_validation');
 		$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 		//Validating Name Field
@@ -47,17 +47,19 @@
 		 
 		if ($this->form_validation->run() === FALSE)
         {
-            $this->load->view('stud_add', $data);
+            $this->load->view('Stud_add', $data);
         }
         else
         {
-         $this->load->model('Stud_Model');
+         
          $this->db->group_by("name");
          $q = $this->Stud_Model->insert($data); 
-		 $this->db->group_by("name");
-         $query = $this->db->get("student"); 
-         $data['records'] = $query->result();
-		 $this->load->view('Stud_view', $data);
+		 redirect('user/login_view');
+		 //$this->load->view('user_profile.php');
+		 //$this->db->group_by("name");
+         //$query = $this->db->get("student"); 
+        // $data['records'] = $query->result();
+		 //$this->load->view('Stud_view', $data);
         }
       } 
   

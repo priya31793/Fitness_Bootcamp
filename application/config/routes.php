@@ -49,13 +49,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'user';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['stud/view'] = "Stud_controller"; 
-$route['stud/add'] = 'Stud_controller/add_student'; 
-$route['stud/add_view'] = 'Stud_controller/add_student_view'; 
-$route['stud/edit/(\d+)'] = 'Stud_controller/update_student_view/$1'; 
-$route['stud/delete/(\d+)'] = 'Stud_controller/delete_student/$1';
+$route['view_file'] = 'map';
+$route['view_file/add'] = 'map/add_student';
+//$route['stud/view'] = "Stud_controller"; 
+//$route['stud/add'] = 'Stud_controller/add_student'; 
+//$route['stud/add_view'] = 'Stud_controller/add_student_view'; 
+//$route['stud/edit/(\d+)'] = 'Stud_controller/update_student_view/$1'; 
+//$route['stud/delete/(\d+)'] = 'Stud_controller/delete_student/$1';
 $route['profiler'] = "Profiler_controller"; 
 $route['profiler/disable'] = "Profiler_controller/disable";
