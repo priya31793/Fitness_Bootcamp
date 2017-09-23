@@ -37,31 +37,13 @@
 								</li>
 								<li>
 									<a href="classes.html" class="fh5co-sub-ddown">Classes</a>
-									 <!--<ul class="fh5co-sub-menu">
-									 	<li><a href="left-sidebar.html">Web Development</a></li>
-									 	<li><a href="right-sidebar.html">Branding &amp; Identity</a></li>
-										<li>
-											<a href="#" class="fh5co-sub-ddown">Free HTML5</a>
-											<ul class="fh5co-sub-menu">
-												<li><a href="" target="_blank">Build</a></li>
-												<li><a href="" target="_blank">Work</a></li>
-												<li><a href="" target="_blank">Light</a></li>
-												<li><a href="" target="_blank">Relic</a></li>
-												<li><a href="" target="_blank">Display</a></li>
-												<li><a href="" target="_blank">Sprint</a></li>
-											</ul>
-										</li>
-										<li><a href="#">UI Animation</a></li>
-										<li><a href="#">Copywriting</a></li>
-										<li><a href="#">Photography</a></li> 
-									</ul>-->
 								</li>
 								<li>
 									<a href="schedule.html">Schedule</a>
 								</li>
 								<li><a href="trainer.html">Trainers</a></li>
 								<li><a href="about.html">About</a></li>
-								<li><a href="<?=base_url()?>view_file">Contact</a></li>
+								<li><a href="<?=base_url()?>contact_view">Contact</a></li>
 							</ul>
 						</nav>
 					</div>

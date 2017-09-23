@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class map extends CI_Controller {
+class contact extends CI_Controller {
 
 public function __construct(){
 
@@ -11,15 +11,18 @@ public function __construct(){
 		$this->load->model('user_model');
 		$this->load->library('session');
 		$this->load->database(); 
+        $this->load->helper('form');
 
 }
 
 public function index()
 {
 	$this->load->library('form_validation');
-	//$this->db->group_by("name");
-	//$query = $this->db->get("student"); 
-	//$data['records'] = $query->result(); 
+	$data = array();
+	$this->db->group_by("name");
+	$query = $this->db->get("contact"); 
+	$data['records'] = $query->result(); 
+	
 	$this->load->library('googlemaps');
 	$config = array();
 	$config['center'] = 'auto';
@@ -31,24 +34,23 @@ public function index()
 	}
 	centreGot = true;';
 	$this->googlemaps->initialize($config);
-   
 	// set up the marker ready for positioning 
 	// once we know the users location
 	$marker = array();
 	$this->googlemaps->add_marker($marker);
 	$data['map'] = $this->googlemaps->create_map();
-	$this->load->view('view_file', $data);
+	$this->load->view('contact_view', $data);
 }
 
-public function add_student_view() 
+public function add_contact_view() 
 { 
 	 $this->load->helper('form'); 
-	 $this->load->view('view_file'); 
+	 $this->load->view('contact_view'); 
 } 
   
-public function add_student() 
+public function add_contact() 
 { 
-	$this->load->model('Stud_Model');
+	$this->load->model('Contact_Model');
 	$this->load->library('form_validation');
 	$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 	//Validating Name Field
@@ -71,14 +73,32 @@ public function add_student()
 	 
 	if ($this->form_validation->run() === FALSE)
 	{
-		$this->load->view('view_file', $data);
-	}
+		$this->session->set_flashdata('error_msg', 'Please Enter all the Details.');
+		$this->load->library('googlemaps');
+		$config = array();
+		$config['center'] = 'auto';
+		$config['onboundschanged'] = 'if (!centreGot) {
+		var mapCentre = map.getCenter();
+		marker_0.setOptions({
+			position: new google.maps.LatLng(mapCentre.lat(), mapCentre.lng()) 
+		});
+		}
+		centreGot = true;';
+		$this->googlemaps->initialize($config);
+		// set up the marker ready for positioning 
+		// once we know the users location
+		$marker = array();
+		$this->googlemaps->add_marker($marker);
+		$data['map'] = $this->googlemaps->create_map();
+		$this->load->view('contact_view',$data);
+	}	
 	else
 	{
-	 
 	 $this->db->group_by("name");
-	 $q = $this->Stud_Model->insert($data); 
-	 redirect('user/login_view');
+	 $q = $this->Contact_Model->insert($data);
+	  $this->session->set_flashdata('success_msg', 'Submitted successfully!.');
+	 
+	 redirect('contact_view');
 	}
   }
 }

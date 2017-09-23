@@ -37,31 +37,13 @@
 								</li>
 								<li>
 									<a href="classes.html" class="fh5co-sub-ddown">Classes</a>
-									 <!--<ul class="fh5co-sub-menu">
-									 	<li><a href="left-sidebar.html">Web Development</a></li>
-									 	<li><a href="right-sidebar.html">Branding &amp; Identity</a></li>
-										<li>
-											<a href="#" class="fh5co-sub-ddown">Free HTML5</a>
-											<ul class="fh5co-sub-menu">
-												<li><a href="" target="_blank">Build</a></li>
-												<li><a href="" target="_blank">Work</a></li>
-												<li><a href="" target="_blank">Light</a></li>
-												<li><a href="" target="_blank">Relic</a></li>
-												<li><a href="" target="_blank">Display</a></li>
-												<li><a href="" target="_blank">Sprint</a></li>
-											</ul>
-										</li>
-										<li><a href="#">UI Animation</a></li>
-										<li><a href="#">Copywriting</a></li>
-										<li><a href="#">Photography</a></li> 
-									</ul>-->
 								</li>
 								<li>
 									<a href="schedule.html">Schedule</a>
 								</li>
 								<li><a href="trainer.html">Trainers</a></li>
 								<li><a href="about.html">About</a></li>
-								<li><a href="<?=base_url()?>view_file">Contact</a></li>
+								<li><a href="<?=base_url()?>contact_view">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -71,7 +53,7 @@
 		<!-- end:fh5co-header -->
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image:url(images/home.jpg);">
+			<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image:url(<?php echo base_url(); ?>images/home.jpg);">
 				<div class="desc animate-box">
 					<div class="container">
 						<div class="row">
@@ -95,31 +77,30 @@
                       <h3 class="panel-title">Registration</h3>
                   </div>
                   <div class="panel-body">
-                  <?php
-                  $error_msg=$this->session->flashdata('error_msg');
-                  if($error_msg){
-                    echo $error_msg;
-                  }
-                  ?>
 				  <form role="form" method="post" action="<?php echo base_url('user/register_user'); ?>">
 					  <fieldset>
-						  <div class="form-group">
-							  <input class="form-control" placeholder="Name" name="user_name" type="text" autofocus>
+						  <div class="form-group">							  
+						  <?php echo form_error('user_name','<span style="color:red;" class="error">','</span>')?>
+							  <input class="form-control" placeholder="Name" name="user_name" value="<?=set_value('user_name')?>" type="text" autofocus>
 						  </div>
 
 						  <div class="form-group">
-							  <input class="form-control" placeholder="E-mail" name="user_email" type="email" autofocus>
+						     <?php echo form_error('user_email','<span style="color:red;" class="error">','</span>')?>
+							<input class="form-control" placeholder="E-mail" value="<?=set_value('user_email')?>" name="user_email" type="email" autofocus>
 						  </div>
 						  <div class="form-group">
-							  <input class="form-control" placeholder="Password" name="user_password" type="password" value="">
-						  </div>
-
-						  <div class="form-group">
-							  <input class="form-control" placeholder="Age" name="user_age" type="number" value="">
+						  	 <?php echo form_error('user_password','<span style="color:red;" class="error">','</span>')?>
+							  <input class="form-control" placeholder="Password" value="" name="user_password" type="password" value="">
 						  </div>
 
 						  <div class="form-group">
-							  <input class="form-control" placeholder="Mobile No" name="user_mobile" type="number" value="">
+						  	  <?php echo form_error('user_age','<span style="color:red;" class="error">','</span>')?>
+							  <input class="form-control" placeholder="Age" name="user_age" type="number" value="<?=set_value('user_age')?>">
+						  </div>
+
+						  <div class="form-group">
+						  		<?php echo form_error('user_mobile','<span style="color:red;" class="error">','</span>')?>
+							  <input class="form-control" placeholder="Mobile No" name="user_mobile" type="number" value="<?=set_value('user_mobile')?>">
 						  </div>
 
 						  <input class="btn btn-lg btn-success btn-block" type="submit" value="Register" name="register" >

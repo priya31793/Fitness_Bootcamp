@@ -16,8 +16,8 @@ public function login_user($email,$pass){
   $this->db->from('user');
   $this->db->where('user_email',$email);
   $this->db->where('user_password',$pass);
-
-  if($query=$this->db->get())
+ $query=$this->db->get();
+  if($query->num_rows() == 1)
   {
       return $query->row_array();
   }

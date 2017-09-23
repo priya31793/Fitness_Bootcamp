@@ -14,20 +14,11 @@ public function __construct(){
 public function index()
 {
 	 $this->load->view("register.php");
-	 //$this->load->library('table');
 	 $this->load->library('form_validation');
-	 //$this->db->group_by("name");
-	 //$query = $this->db->get("student"); 
-	 //$data['records'] = $query->result(); 
-	 //$this->table->generate($query);
-	 //$this->load->helper('url'); 
-	 //$this->load->view('Stud_view',$data); 
-      } 
+} 
   
-
-
 public function register_user(){
-
+	$email='';
 	$user=array(
 	  'user_name'=>$this->input->post('user_name'),
 	  'user_email'=>$this->input->post('user_email'),
@@ -35,19 +26,29 @@ public function register_user(){
 	  'user_age'=>$this->input->post('user_age'),
 	  'user_mobile'=>$this->input->post('user_mobile')
 	);
-	print_r($user);
 
 	$email_check=$this->user_model->email_check($user['user_email']);
-
-	if($email_check){
+	
+	$this->load->library('form_validation');
+	$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+	//Validating Name Field
+	$this->form_validation->set_rules('user_name', 'Username', 'trim|required');
+	//Validating user Name Field
+	$this->form_validation->set_rules('user_email', 'Email', 'required|valid_email');
+	//Validating password Field
+	$this->form_validation->set_rules('user_password', 'Password', 'required');
+	//Validating age Field
+	$this->form_validation->set_rules('user_age', 'Age', 'required|min_length[1]|max_length[3]');
+	//Validating user_mobile Field
+	$this->form_validation->set_rules('user_mobile', 'Mobile', 'required|min_length[1]|max_length[10]');
+	
+	if($this->form_validation->run() == FALSE) {
+	  $this->load->view('register',$user);
+	}
+	else {
 	  $this->user_model->register_user($user);
 	  $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
 	  redirect('user/login_view');
-	}
-	else{
-
-	  $this->session->set_flashdata('error_msg', 'Please Enter all the Details.');
-	  redirect('user');
 	}
 }
 
@@ -63,21 +64,28 @@ function login_user(){
     );
 
     $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
-	  if($data)
-	  {
-		$this->session->set_userdata('user_id',$data['user_id']);
-		$this->session->set_userdata('user_email',$data['user_email']);
-		$this->session->set_userdata('user_name',$data['user_name']);
-		$this->session->set_userdata('user_age',$data['user_age']);
-		$this->session->set_userdata('user_mobile',$data['user_mobile']);
-
-		//$this->load->view('user_profile.php');
-		redirect('view_file', 'refresh');
-	  }
-	  else{
-		$this->session->set_flashdata('error_msg', 'Error occured,Try again.');
+	if($data !=''){
+	$this->session->set_userdata('user_id',$data['user_id'],TRUE);
+		$this->session->set_userdata('user_email',$data['user_email'],TRUE);
+		$this->session->set_userdata('user_name',$data['user_name'],TRUE);
+		$this->session->set_userdata('user_age',$data['user_age'],TRUE);
+		$this->session->set_userdata('user_mobile',$data['user_mobile'],TRUE);
+	}
+	
+	$this->load->library('form_validation');
+	$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+	//Validating Name Field
+	$this->form_validation->set_rules('user_email', 'user_email', 'required|valid_email');
+	//Validating password Field
+	$this->form_validation->set_rules('user_password', 'user_password', 'required');
+	
+	if($this->form_validation->run() == FALSE) {
+	  $this->session->set_flashdata('error_msg', 'Incorrect Username or Password.');
 		$this->load->view("login.php");
-	  }
+	 }
+	else {
+		$this->load->view('user_profile');	
+	}
 }
 
 function user_profile(){
