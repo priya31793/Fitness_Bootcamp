@@ -43,7 +43,7 @@
 								</li>
 								<li><a href="trainer.html">Trainers</a></li>
 								<li><a href="about.html">About</a></li>
-								<li><a href="<?=base_url()?>contact_view">Contact</a></li>
+								<li><a href="<?=base_url()?>contact_add">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -120,7 +120,10 @@
 					<div class="row">
 						<div class="col-md-4 animate-box">
 							<h3 class="section-title">About Us</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+							<p>
+							The objectives of Boot Camp are to promote and provide a diverse and exciting range of professionally-provided, affordable sporting and physical recreation participation opportunities for all of our members.
+							With a focus on your health and wellbeing, our programs are designed to increase your personal health and fitness in a friendly environment.
+							</p>
 						</div>
 
 						<div class="col-md-4 animate-box">

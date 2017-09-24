@@ -17,8 +17,12 @@
 	<!-- Superfish -->
 	<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/superfish.css">
 	<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/style.css">
-	<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/contact.css">
+    <script type="text/javascript">
+		var centreGot = false;
+	</script>
+	<?php echo $map['js']; ?>
 	</head>
+
 <body> 
  <div id="fh5co-wrapper">
 		<div id="fh5co-page">
@@ -63,50 +67,77 @@
 				</div>
 			</div>
 		</div><!-- end: fh5co-parallax -->
-		
+		<br>
 		<div class="container"><!-- container class is used to centered  the body of the browser with some decent width-->
 		<div class="row"><!-- row class is used for grid system in Bootstrap-->
-          <br>
-      
-		  
-	<div id="body">
-		<h2>Contact View</h2>
-         <?php 
-		 
-            echo form_open('contact/contact_view');
-			echo "<table border='0' cellpadding='4' cellspacing='0' width=100%>";
-            $i = 1; 
-            echo "<tr>"; 
-            echo "<td>S.No</td>"; 
-            echo "<td>Name</td>";
-            echo "<td>Email</td>";
-            echo "<td>Address</td>"; 
-            echo "<td>City</td>"; 
-            echo "<td>State</td>"; 
-            echo "<td>Feedback</td>";
-            //echo "<td>Edit</td>"; 
-            echo "<td>Delete</td>"; 
-            echo "</tr>"; 
-				
-            foreach($records as $r) { 
-               echo "<tr>"; 
-               echo "<td>".$i++."</td>"; 
-			   echo "<td>".$r->name."</td>"; 
-               echo "<td>".$r->email."</td>"; 
-               echo "<td>".$r->address."</td>"; 
-			   echo "<td>".$r->city."</td>"; 
-			   echo "<td>".$r->state."</td>"; 
-			   echo "<td>".$r->feedback."</td>"; 
-			   //echo "<td><a href = '".base_url()."index.php/stud/edit/".$r->id."'>Edit</a></td>"; 
-               echo "<td><a href = '".base_url()."contact_view/delete/".$r->id."'>Delete</a></td>"; 
-               echo "</tr>"; 
-            } 
-			echo " </table>";
-			echo form_close();
-         ?>
-		<br><br>
-		</div></div></div>
-   <!-- fh5co-blog-section -->
+          <div class="col-md-4 col-md-offset-4"><!--col-md-4 is used to create the no of colums in the grid also use for medimum and large devices-->
+              <div class="login-panel panel panel-success">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">Contact US</h3>
+                  </div>
+		  <div class="panel-body">				 
+			<div id="body">
+			<?php
+			  $success_msg= $this->session->flashdata('success_msg');
+			  $error_msg= $this->session->flashdata('error_msg');
+			  if($success_msg){
+				?>
+				<div class="alert alert-success">
+				  <?php echo $success_msg; ?>
+				</div>
+			  <?php
+			  }
+			  if($error_msg){
+				?>
+				<div class="alert alert-danger">
+				  <?php echo $error_msg; ?>
+				</div>
+				<?php
+			}
+            ?>	
+			<?php
+            echo form_open('contact/add_contact');
+			echo "<fieldset>";
+			echo "<div class='form-group'>";
+			echo form_error('name','<span style="color:red;" class="error">','</span>'); 
+            echo form_input(array('id'=>'name','name'=>'name','placeholder'=>"Name",'class'=>"form-control")); 
+			echo "</div>";
+            echo "<br/>"; 
+			echo "<div class='form-group'>";
+			echo form_error('email','<span style="color:red;" class="error">','</span>');
+            echo form_input(array('id'=>'email','name'=>'email','type'=>'email','placeholder'=>"Please Enter Email",'class'=>"form-control")); 
+			echo "</div>";
+            echo "<br/>"; 
+			echo "<div class='form-group'>";
+			echo form_error('address','<span style="color:red;" class="error">','</span>');
+            echo form_input(array('id'=>'address','name'=>'address','placeholder'=>"Please Enter Address",'class'=>"form-control")); 
+			echo "</div>";
+            echo "<br/>"; 
+			echo "<div class='form-group'>";
+            echo form_input(array('id'=>'city','name'=>'city','placeholder'=>"Please Enter City",'class'=>"form-control")); 
+			echo "</div>";
+            echo "<br/>"; 
+			echo "<div class='form-group'>";
+            echo form_input(array('id'=>'state','name'=>'state','placeholder'=>"Please Enter State",'class'=>"form-control")); 
+			echo "</div>";
+            echo "<br/>";
+			echo "<div class='form-group'>";			
+			echo form_error('feedback','<span  style="color:red;" class="error">','</span>');
+            echo form_textarea(array('id'=>'feedback','name'=>'feedback','placeholder'=>"Please Enter Feedback",'class'=>"form-control")); 
+			echo "</div>";
+            echo "<br/>";
+            echo form_submit(array('id'=>'submit','value'=>'Submit','class'=>"btn btn-lg btn-success btn-block")); 
+			echo "</fieldset>";
+            echo form_close(); 
+         ?> 
+		</div>
+		</div>
+		</div></div></div></div>
+		<!-- Google Map -->
+		<div>
+			<?php echo $map['html']; ?>
+		</div>
+		<!-- fh5co-blog-section -->
 		<footer>
 			<div id="footer">
 				<div class="container">

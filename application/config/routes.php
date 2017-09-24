@@ -52,12 +52,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'user';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['contact_view'] = 'contact';
-$route['contact_view/add'] = 'contact/add_contact';
+$route['contact_add'] = 'contact';
+$route['contact_add/add'] = 'contact/add_contact';
+$route['contact_view'] = 'contact/contact_view';
+
 //$route['map/view'] = "map"; 
 //$route['stud/add'] = 'Stud_controller/add_student'; 
 //$route['stud/add_view'] = 'Stud_controller/add_student_view'; 
 //$route['stud/edit/(\d+)'] = 'Stud_controller/update_student_view/$1'; 
-//$route['stud/delete/(\d+)'] = 'Stud_controller/delete_student/$1';
+$route['contact_view/delete/(\d+)'] = 'contact/delete_contact/$1';
 $route['profiler'] = "Profiler_controller"; 
 $route['profiler/disable'] = "Profiler_controller/disable";

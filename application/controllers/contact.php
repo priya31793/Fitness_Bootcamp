@@ -39,13 +39,13 @@ public function index()
 	$marker = array();
 	$this->googlemaps->add_marker($marker);
 	$data['map'] = $this->googlemaps->create_map();
-	$this->load->view('contact_view', $data);
+	$this->load->view('contact_add', $data); 
 }
 
 public function add_contact_view() 
 { 
 	 $this->load->helper('form'); 
-	 $this->load->view('contact_view'); 
+	 $this->load->view('contact_add'); 
 } 
   
 public function add_contact() 
@@ -90,7 +90,7 @@ public function add_contact()
 		$marker = array();
 		$this->googlemaps->add_marker($marker);
 		$data['map'] = $this->googlemaps->create_map();
-		$this->load->view('contact_view',$data);
+		$this->load->view('contact_add',$data);
 	}	
 	else
 	{
@@ -98,7 +98,28 @@ public function add_contact()
 	 $q = $this->Contact_Model->insert($data);
 	  $this->session->set_flashdata('success_msg', 'Submitted successfully!.');
 	 
-	 redirect('contact_view');
+	 redirect('contact_add');
 	}
   }
+
+public function contact_view()
+{
+	 $this->load->library('table');
+	 $this->db->group_by("name");
+	 $query = $this->db->get("contact"); 
+	 $data['records'] = $query->result(); 
+	 $this->table->generate($query);
+	 $this->load->helper('url'); 
+	 $this->load->view('contact_view',$data);
+}
+
+public function delete_contact() { 
+	$this->load->model('Contact_Model'); 
+	$id = $this->uri->segment('3');
+	$this->db->group_by("name");
+	$this->Contact_Model->delete($id); 
+	$query = $this->db->get("contact");
+	$data['records'] = $query->result(); 
+	$this->load->view('contact_view',$data); 
+      }
 }
