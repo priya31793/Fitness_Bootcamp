@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['contact_add'] = 'contact';
 $route['contact_add/add'] = 'contact/add_contact';
 $route['contact_view'] = 'contact/contact_view';
+$route['home'] = 'user/home';
 
 //$route['map/view'] = "map"; 
 //$route['stud/add'] = 'Stud_controller/add_student'; 

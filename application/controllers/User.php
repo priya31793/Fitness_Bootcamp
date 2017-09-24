@@ -99,5 +99,10 @@ public function user_logout(){
 	redirect('user/login_view', 'refresh');
 }
 
+public function home(){
+
+	$this->load->view("home.php");
+}
+
 }
 ?>

@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Boot Camp</title>
+    <title>DB Fitness</title>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
@@ -28,12 +28,12 @@
 				<div class="container">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="login.php">Boot<span>Camp</span></a></h1>
+						<h1 id="fh5co-logo"><a href="login.php">DB &nbsp;<span>Fitness</span></a></h1>
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li class="active">
-									<a href="<?=base_url()?>">Home</a>
+									<a href="<?=base_url()?>home">Home</a>
 								</li>
 								<li>
 									<a href="classes.html" class="fh5co-sub-ddown">Classes</a>
@@ -60,8 +60,8 @@
 						<div class="row">
 							<div class="col-md-7">
 								<h2>Fitness &amp; Health <br>is a <b>Mentality</b></h2>
-								<p><span>Created with <i class="icon-heart3"></i> by the fine folks at <a href="" class="fh5co-site-name">UTS Students</a></span></p>
-								<span><a class="btn btn-primary" href="<?=base_url()?>user/login_view">Start Your Journey</a></span>
+								<p><span>The DB Fitness Centre offers a range of fitness and wellness services. Our Team provides and delivers high quality training and professionalism across all areas.</span></p>
+								<span><a class="btn btn-primary" href="<?=base_url()?>user/login_view">Sign up/ Register</a></span>
 							</div>
 						</div>
 					</div>
@@ -121,7 +121,7 @@
 						<div class="col-md-4 animate-box">
 							<h3 class="section-title">About Us</h3>
 							<p>
-							The objectives of Boot Camp are to promote and provide a diverse and exciting range of professionally-provided, affordable sporting and physical recreation participation opportunities for all of our members.
+							The objectives of DB Fitness are to promote and provide a diverse and exciting range of professionally-provided, affordable sporting and physical recreation participation opportunities for all of our members.
 							With a focus on your health and wellbeing, our programs are designed to increase your personal health and fitness in a friendly environment.
 							</p>
 						</div>
@@ -131,8 +131,8 @@
 							<ul class="contact-info">
 								<li><i class="icon-map-marker"></i>University of Technology Sydney</li>
 								<li><i class="icon-phone"></i>+ 1235 2355 98</li>
-								<li><i class="icon-envelope"></i><a href="#">info@bootcamp.com</a></li>
-								<li><i class="icon-globe2"></i><a href="#">www.bootcamp.com</a></li>
+								<li><i class="icon-envelope"></i>DBfitness1587@gmail.com</li>
+								<li><i class="icon-globe2"></i><a href="#">www.dbfitness.com</a></li>
 							</ul>
 						</div>
 						<div class="col-md-4 animate-box">
@@ -160,12 +160,12 @@
 						<div class="col-md-6 col-md-offset-3 text-center">
 							<p class="fh5co-social-icons">
 								<a href="#"><i class="icon-twitter2"></i></a>
-								<a href="#"><i class="icon-facebook2"></i></a>
+								<a href="https://www.facebook.com/DBfitness-1662780963766595/?ti=as"><i class="icon-facebook2"></i></a>
 								<a href="#"><i class="icon-instagram"></i></a>
 								<a href="#"><i class="icon-dribbble2"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
-							<p>Copyright 2017 <a href="#">Boot Camp</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
+							<p>Copyright 2017 <a href="#">DB Fitness</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
 						</div>
 					</div>
 				</div>

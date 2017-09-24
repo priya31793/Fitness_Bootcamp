@@ -3,7 +3,7 @@
 <html lang = "en">
    <head> 
 	<script type = 'text/javascript' src = "<?php echo base_url(); ?>js/modernizr-2.6.2.min.js"></script>	
-    <title>Boot Camp</title>
+    <title>DB Fitness</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
@@ -27,12 +27,12 @@
 				<div class="container">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="register.php">Boot<span>Camp</span></a></h1>
+						<h1 id="fh5co-logo"><a href="register.php">DB &nbsp;<span>Fitness</span></a></h1>
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li class="active">
-									<a href="<?=base_url()?>">Home</a>
+									<a href="<?=base_url()?>home">Home</a>
 								</li>
 								<li>
 									<a href="classes.html" class="fh5co-sub-ddown">Classes</a>
@@ -106,7 +106,7 @@
          ?>
 		<br><br>
 		</div></div></div>
-   <!-- fh5co-blog-section -->
+  <!-- fh5co-blog-section -->
 		<footer>
 			<div id="footer">
 				<div class="container">
@@ -114,17 +114,18 @@
 						<div class="col-md-4 animate-box">
 							<h3 class="section-title">About Us</h3>
 							<p>
-							The objectives of Boot Camp are to promote and provide a diverse and exciting range of professionally-provided, affordable sporting and physical recreation participation opportunities for all of our members.
+							The objectives of DB Fitness are to promote and provide a diverse and exciting range of professionally-provided, affordable sporting and physical recreation participation opportunities for all of our members.
 							With a focus on your health and wellbeing, our programs are designed to increase your personal health and fitness in a friendly environment.
-							</p>						
+							</p>
 						</div>
+
 						<div class="col-md-4 animate-box">
 							<h3 class="section-title">Our Address</h3>
 							<ul class="contact-info">
 								<li><i class="icon-map-marker"></i>University of Technology Sydney</li>
 								<li><i class="icon-phone"></i>+ 1235 2355 98</li>
-								<li><i class="icon-envelope"></i><a href="#">info@bootcamp.com</a></li>
-								<li><i class="icon-globe2"></i><a href="#">www.bootcamp.com</a></li>
+								<li><i class="icon-envelope"></i>DBfitness1587@gmail.com</li>
+								<li><i class="icon-globe2"></i><a href="#">www.dbfitness.com</a></li>
 							</ul>
 						</div>
 						<div class="col-md-4 animate-box">
@@ -152,19 +153,19 @@
 						<div class="col-md-6 col-md-offset-3 text-center">
 							<p class="fh5co-social-icons">
 								<a href="#"><i class="icon-twitter2"></i></a>
-								<a href="#"><i class="icon-facebook2"></i></a>
+								<a href="https://www.facebook.com/DBfitness-1662780963766595/?ti=as"><i class="icon-facebook2"></i></a>
 								<a href="#"><i class="icon-instagram"></i></a>
 								<a href="#"><i class="icon-dribbble2"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
-							<p>Copyright 2017 <a href="#">Boot Camp</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
+							<p>Copyright 2017 <a href="#">DB Fitness</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</footer>
 </div>
-</div>	
+</div>
 	<script src="<?=base_url()?>js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="<?=base_url()?>js/jquery.easing.1.3.js"></script>
@@ -179,5 +180,5 @@
 	<script src="<?=base_url()?>js/superfish.js"></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="<?=base_url()?>js/main.js"></script>
-   </body>
+  </body>
 </html>
