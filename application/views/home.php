@@ -19,6 +19,10 @@
 	<!-- Modernizr JS -->
 	<script type = 'text/javascript' src = "<?php echo base_url(); ?>js/modernizr-2.6.2.min.js"></script>
   </head>
+  <style>
+  
+  body {background:#ff0;}
+  </style>
   <body>
   
   <div id="fh5co-wrapper">
@@ -68,7 +72,6 @@
 				</div>
 			</div>
 		</div>
-		<br>
 		<div id="fh5co-schedule-section" class="fh5co-lightgray-section">
 			<div class="container">
 				<div class="row">
@@ -100,7 +103,7 @@
 										<img src="images/fit-dumbell.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Body Building</h3>
-										<span>John Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -108,7 +111,7 @@
 										<img src="images/fit-yoga.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -116,7 +119,7 @@
 										<img src="images/fit-cycling.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -124,7 +127,7 @@
 										<img src="images/fit-boxing.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 							</div>
@@ -136,7 +139,7 @@
 										<img src="images/fit-yoga.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -144,7 +147,7 @@
 										<img src="images/fit-dumbell.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Body Building</h3>
-										<span>John Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -152,7 +155,7 @@
 										<img src="images/fit-boxing.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -160,7 +163,7 @@
 										<img src="images/fit-cycling.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								
@@ -173,7 +176,7 @@
 										<img src="images/fit-dumbell.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Body Building</h3>
-										<span>John Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -181,7 +184,7 @@
 										<img src="images/fit-yoga.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -189,7 +192,7 @@
 										<img src="images/fit-cycling.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -197,7 +200,7 @@
 										<img src="images/fit-boxing.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 							</div>
@@ -209,7 +212,7 @@
 										<img src="images/fit-yoga.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -217,7 +220,7 @@
 										<img src="images/fit-dumbell.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Body Building</h3>
-										<span>John Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -225,7 +228,7 @@
 										<img src="images/fit-boxing.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -233,7 +236,7 @@
 										<img src="images/fit-cycling.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 							</div>
@@ -245,7 +248,7 @@
 										<img src="images/fit-dumbell.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Body Building</h3>
-										<span>John Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -253,7 +256,7 @@
 										<img src="images/fit-yoga.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -261,7 +264,7 @@
 										<img src="images/fit-cycling.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -269,7 +272,7 @@
 										<img src="images/fit-boxing.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 							</div>
@@ -281,7 +284,7 @@
 										<img src="images/fit-yoga.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -289,7 +292,7 @@
 										<img src="images/fit-dumbell.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Body Building</h3>
-										<span>John Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -297,7 +300,7 @@
 										<img src="images/fit-boxing.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -305,7 +308,7 @@
 										<img src="images/fit-cycling.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 							</div>
@@ -317,7 +320,7 @@
 										<img src="images/fit-dumbell.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Body Building</h3>
-										<span>John Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -325,7 +328,7 @@
 										<img src="images/fit-yoga.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -333,7 +336,7 @@
 										<img src="images/fit-cycling.svg" alt="">
 										<small>06AM-7AM</small>
 										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
@@ -341,7 +344,7 @@
 										<img src="images/fit-boxing.svg" alt="Cycling">
 										<small>06AM-7AM</small>
 										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
+										<span>Da Buckley</span>
 									</div>
 								</div>
 							</div>
@@ -380,7 +383,6 @@
 						<div class="program animate-box">
 							<img src="images/fit-dumbell.svg" alt="Cycling">
 							<h3>Body Combat</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 							<span><a href="<?=base_url()?>user/login_view" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
@@ -388,7 +390,6 @@
 						<div class="program animate-box">
 							<img src="images/fit-yoga.svg" alt="">
 							<h3>Yoga Programs</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 							<span><a href="<?=base_url()?>user/login_view" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
@@ -396,7 +397,6 @@
 						<div class="program animate-box">
 							<img src="images/fit-cycling.svg" alt="">
 							<h3>Cycling Program</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 							<span><a href="<?=base_url()?>user/login_view" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
@@ -404,7 +404,6 @@
 						<div class="program animate-box">
 							<img src="images/fit-boxing.svg" alt="Cycling">
 							<h3>Boxing Fitness</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 							<span><a href="<?=base_url()?>user/login_view" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
@@ -412,7 +411,6 @@
 						<div class="program animate-box">
 							<img src="images/fit-swimming.svg" alt="">
 							<h3>Swimming Program</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 							<span><a href="<?=base_url()?>user/login_view" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
@@ -420,7 +418,6 @@
 						<div class="program animate-box">
 							<img src="images/fit-massage.svg" alt="">
 							<h3>Massage</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 							<span><a href="<?=base_url()?>user/login_view" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
@@ -441,7 +438,7 @@
 						<div class="team-section-grid animate-box" style="background-image: url(images/6.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
-									<h3>John Doe</h3>
+									<h3>Da Buckley</h3>
 									<span>Body Trainer</span>
 									<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
@@ -456,7 +453,7 @@
 						<div class="team-section-grid animate-box" style="background-image: url(images/7.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
-									<h3>James Smith</h3>
+									<h3>Da Buckley</h3>
 									<span>Swimming Trainer</span>
 									<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
@@ -471,7 +468,7 @@
 						<div class="team-section-grid animate-box" style="background-image: url(images/c5.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
-									<h3>John Doe</h3>
+									<h3>Da Buckley</h3>
 									<span>Chief Executive Officer</span>
 									<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
@@ -486,7 +483,7 @@
 						<div class="team-section-grid animate-box" style="background-image: url(images/8.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
-									<h3>John Doe</h3>
+									<h3>Da Buckley</h3>
 									<span>Chief Executive Officer</span>
 									<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
@@ -501,7 +498,7 @@
 						<div class="team-section-grid animate-box" style="background-image: url(images/9.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
-									<h3>John Doe</h3>
+									<h3>Da Buckley</h3>
 									<span>Chief Executive Officer</span>
 									<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
@@ -516,7 +513,7 @@
 						<div class="team-section-grid animate-box" style="background-image: url(images/10.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
-									<h3>John Doe</h3>
+									<h3>Da Buckley</h3>
 									<span>Chief Executive Officer</span>
 									<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
@@ -647,7 +644,7 @@
 						<div class="col-md-4 animate-box">
 							<h3 class="section-title">Our Address</h3>
 							<ul class="contact-info">
-								<li><i class="icon-map-marker"></i>University of Technology Sydney</li>
+								<li><i class="icon-map-marker"></i>DB Fitness Bootcamp</li>
 								<li><i class="icon-phone"></i>+ 1235 2355 98</li>
 								<li><i class="icon-envelope"></i>DBfitness1587@gmail.com</li>
 								<li><i class="icon-globe2"></i><a href="#">www.dbfitness.com</a></li>
@@ -683,7 +680,7 @@
 								<a href="#"><i class="icon-dribbble2"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
-							<p>Copyright 2017 <a href="#">DB Fitness</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
+							<p>Copyright 2018 <a href="#">DB Fitness Bootcamp</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
 						</div>
 					</div>
 				</div>
