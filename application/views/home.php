@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<?php
+$user_id=$this->session->userdata('user_id');
+
+if(!$user_id){
+
+  redirect('user/login_view');
+}
+
+ ?><!DOCTYPE html>
 <html class="no-js"> <!--<![endif]-->
 	<head>
 	<meta charset="utf-8">
@@ -19,10 +27,6 @@
 	<!-- Modernizr JS -->
 	<script type = 'text/javascript' src = "<?php echo base_url(); ?>js/modernizr-2.6.2.min.js"></script>
   </head>
-  <style>
-  
-  body {background:#ff0;}
-  </style>
   <body>
   
   <div id="fh5co-wrapper">
@@ -46,7 +50,7 @@
 									<a href="schedule.html">Schedule</a>
 								</li>
 								<li><a href="trainer.html">Trainers</a></li>
-								<li><a href="about.html">About</a></li>
+								<li><a href="<?=base_url()?>about">About</a></li>
 								<li><a href="<?=base_url()?>contact_add">Contact</a></li>
 							</ul>
 						</nav>
@@ -644,8 +648,8 @@
 						<div class="col-md-4 animate-box">
 							<h3 class="section-title">Our Address</h3>
 							<ul class="contact-info">
-								<li><i class="icon-map-marker"></i>DB Fitness Bootcamp</li>
-								<li><i class="icon-phone"></i>+ 1235 2355 98</li>
+								<li><i class="icon-map-marker"></i>DB Fitness, Penrith, NSW</li>
+								<li><i class="icon-phone"></i>+61 423 392 114</li>
 								<li><i class="icon-envelope"></i>DBfitness1587@gmail.com</li>
 								<li><i class="icon-globe2"></i><a href="#">www.dbfitness.com</a></li>
 							</ul>
@@ -680,7 +684,7 @@
 								<a href="#"><i class="icon-dribbble2"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
-							<p>Copyright 2018 <a href="#">DB Fitness Bootcamp</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
+							<p>Copyright 2018 <a href="#">DB Fitness</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
 						</div>
 					</div>
 				</div>

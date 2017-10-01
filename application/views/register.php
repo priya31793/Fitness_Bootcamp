@@ -42,7 +42,7 @@
 									<a href="schedule.html">Schedule</a>
 								</li>
 								<li><a href="trainer.html">Trainers</a></li>
-								<li><a href="about.html">About</a></li>
+								<li><a href="<?=base_url()?>about">About</a></li>
 								<li><a href="<?=base_url()?>contact_add">Contact</a></li>
 							</ul>
 						</nav>
