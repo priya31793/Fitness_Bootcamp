@@ -84,53 +84,14 @@ function login_user(){
 		$this->load->view("login.php");
 	 }
 	else {
-		$pref= array(
-          'show_next_prev' => true,
-           'next_prev_url' => 'http://localhost/week6/calendar/index'
-        );
-		$pref['template']='
-				{table_open}<table border="1" cellpadding="1" cellspacing="2" width=700px;>{/table_open}
-				
-				{heading_row_start}<tr>{/heading_row_start}
-				{heading_previous_cell}<th class="prevcell"><a href="{previous_url}">&lt;&lt;</a></th>{/heading_previous_cell}
-				{heading_title_cell}<th colspan="{colspan}">{heading}</th>{/heading_title_cell}
-				{heading_next_cell}<th class="nextcell"><a href="{next_url}">&gt;&gt;</a></th>{/heading_next_cell}
-				{heading_row_end}</tr>{/heading_row_end}
-				
-				{week_row_start}<tr class="wk_nm">{/week_row_start}
-				{week_day_cell}<td>{week_day}</td>{/week_day_cell}
-				{week_row_end}</tr>{/week_row_end}
-				
-				
-				{cal_row_start}<tr>{/cal_row_start}
-				{cal_cell_start}<td>{/cal_cell_start}
-				{cal_cell_content}<a href="{content}">{day}</a>{/cal_cell_content}
-				{cal_cell_content_today}<div class="highlight"><a href="{content}">{day}</a></div>{/cal_cell_content_today}
-				
-				{cal_cell_content}{day}{/cal_cell_content}
-				{cal_cell_content_today}<div class="highlight">{day}</div>{/call_cell_content_today}
-				
-				{cal_cell_blank}&nbsp;{/cal_cell_blank}
-				
-				{cal_cell_end}</td>{/cal_cell_end}
-				{cal_row_end}</tr>{/cal_cell_end}
-				
-				{table_close}</table>{/table_close}
-			';
-			
-		$this->load->library('calendar',$pref);
-			
-		$data=array('year'=>$this->uri->segment(3),
-					'month'=>$this->uri->segment(4),
-					25=> 'https://www.youtube.com/');
-					
+		
 		$this->load->view('user_profile.php',$data);		
 	}
 }
 
 function user_profile(){
 
-	//$this->load->view('user_profile.php',array());
+	$this->load->view('user_profile.php',array());
 
 }
 public function user_logout(){
