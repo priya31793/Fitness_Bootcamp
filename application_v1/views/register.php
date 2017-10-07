@@ -1,18 +1,10 @@
-<?php
-$user_id=$this->session->userdata('user_id');
-
-if(!$user_id){
-
-  redirect('user/login_view');
-}
-
- ?>
 <!DOCTYPE html>
 <html class="no-js"> <!--<![endif]-->
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>DB Fitness</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
@@ -28,44 +20,7 @@ if(!$user_id){
 	<!-- Modernizr JS -->
 	<script type = 'text/javascript' src = "<?php echo base_url(); ?>js/modernizr-2.6.2.min.js"></script>
   </head>
-  <style>
-  * {
-  box-sizing: border-box;
-}
-
-#search {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#table {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 18px;
-}
-
-#table th, #table td {
-  text-align: left;
-  padding: 12px;
-}
-
-#table tr {
-  border-bottom: 1px solid #ddd;
-}
-
-#table tr.header, #table tr:hover {
-  background-color: #f1f1f1;
-}
-</style>
   <body>
-
   <div id="fh5co-wrapper">
 		<div id="fh5co-page">
 		<div id="fh5co-header">
@@ -73,16 +28,22 @@ if(!$user_id){
 				<div class="container">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="login.php">DB &nbsp;<span>Fitness</span></a></h1>
+						<h1 id="fh5co-logo"><a href="register.php">DB &nbsp;<span>Fitness</span></a></h1>
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li class="active">
-									<a href="<?=base_url()?>user/login_user"></a>
+									<a href="<?=base_url()?>home">Home</a>
 								</li>
-								<li ><a href="<?=base_url()?>user/profile.php"><?php echo $this->session->userdata('user_email');  ?></a></li>
-								<li><a class="btn btn-primary" href="<?php echo base_url('user/user_logout');?>" >  Logout</a>
+								<li>
+									<a href="classes.html" class="fh5co-sub-ddown">Classes</a>
 								</li>
+								<li>
+									<a href="schedule.html">Schedule</a>
+								</li>
+								<li><a href="trainer.html">Trainers</a></li>
+								<li><a href="<?=base_url()?>about">About</a></li>
+								<li><a href="<?=base_url()?>contact_add">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -90,68 +51,71 @@ if(!$user_id){
 			</header>		
 		</div>
 		<!-- end:fh5co-header -->
-		<div class="fh5co-parallax" style="background-image: url(<?php echo base_url(); ?>images/c4.jpeg);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
-						<div class="fh5co-intro fh5co-table-cell animate-box">
-							<h1 class="text-center"><?php echo $this->session->userdata('user_name'); ?></h1>
-							
+		<div class="fh5co-hero">
+			<div class="fh5co-overlay"></div>
+			<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image:url(<?php echo base_url(); ?>images/home.jpg);">
+				<div class="desc animate-box">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-7">
+								<h2>Fitness &amp; Health <br>is a <b>Mentality</b></h2>
+								<p><span>The DB Fitness Centre offers a range of fitness and wellness services. Our Team provides and delivers high quality training and professionalism across all areas.</span></p>
+								<span><a class="btn btn-primary" href="<?=base_url()?>user/login_view">Sign up/ Register</a></span>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div><!-- end: fh5co-parallax -->
-		
-		<div class="container"><!-- container class is used to centered  the body of the browser with some decent width-->
-		<div class="row"><!-- row class is used for grid system in Bootstrap-->
-          <br>
-      
-		  
-	<div id="body">
-		<h2>Enquiry View</h2>
-		<input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-         <?php 
-		 
-            echo form_open('user/contact_view');
-			echo "<table border='0' cellpadding='4' id='table' cellspacing='0' width=100%>";
-            $i = 1; 
-            echo "<tr>"; 
-            echo "<td>S.No</td>"; 
-            echo "<td>Name</td>";
-            echo "<td>Email</td>";
-            echo "<td>Address</td>"; 
-            
-            echo "<td>Feedback</td>";
-            //echo "<td>Edit</td>"; 
-            echo "<td>Delete</td>"; 
-            echo "</tr>"; 
-			if(!empty($records))
-    {
-      foreach($records as $r) // user is an object.
-      {	
-             
-               echo "<tr>"; 
-               echo "<td>".$i++."</td>"; 
-			   echo "<td>".$r->name."</td>"; 
-               echo "<td>".$r->email."</td>"; 
-               echo "<td>".$r->address."</td>";
-			   
-			  // echo"<iframe width='50' height='50' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://www.google.com/maps/embed/v1/place?key=AIzaSyB8qHRtj6PEF2PtBhK9XP6jxqaQTsjvRHM&q=".$r->address[1]." '>";
-			   //echo"</iframe>";
-			   echo "<td>".$r->feedback."</td>"; 
-			   //echo "<td><a href = '".base_url()."index.php/stud/edit/".$r->id."'>Edit</a></td>"; 
-               echo "<td><a href = '".base_url()."contact_view/delete/".$r->id."'>Delete</a></td>"; 
-               echo "</tr>"; 
-            } 
-	}
-			echo " </table>";
-			echo form_close();
-         ?>
-		<br><br>
-		</div></div></div>
-  <!-- fh5co-blog-section -->
+		</div>
+		<br>
+<span style="background-color:red;">
+  <div class="container"><!-- container class is used to centered  the body of the browser with some decent width-->
+      <div class="row"><!-- row class is used for grid system in Bootstrap-->
+          <div class="col-md-4 col-md-offset-4"><!--col-md-4 is used to create the no of colums in the grid also use for medimum and large devices-->
+              <div class="login-panel panel panel-success">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">Registration</h3>
+                  </div>
+                  <div class="panel-body">
+				  <form role="form" method="post" action="<?php echo base_url('user/register_user'); ?>">
+					  <fieldset>
+						  <div class="form-group">							  
+						  <?php echo form_error('user_name','<span style="color:red;" class="error">','</span>')?>
+							  <input class="form-control" placeholder="Name" name="user_name" value="<?=set_value('user_name')?>" type="text" autofocus>
+						  </div>
+
+						  <div class="form-group">
+						     <?php echo form_error('user_email','<span style="color:red;" class="error">','</span>')?>
+							<input class="form-control" placeholder="E-mail" value="<?=set_value('user_email')?>" name="user_email" type="email" autofocus>
+						  </div>
+						  <div class="form-group">
+						  	 <?php echo form_error('user_password','<span style="color:red;" class="error">','</span>')?>
+							  <input class="form-control" placeholder="Password" value="" name="user_password" type="password" value="">
+						  </div>
+
+						  <div class="form-group">
+						  	  <?php echo form_error('user_age','<span style="color:red;" class="error">','</span>')?>
+							  <input class="form-control" placeholder="Age" name="user_age" type="number" value="<?=set_value('user_age')?>">
+						  </div>
+
+						  <div class="form-group">
+						  		<?php echo form_error('user_mobile','<span style="color:red;" class="error">','</span>')?>
+							  <input class="form-control" placeholder="Mobile No" name="user_mobile" type="number" value="<?=set_value('user_mobile')?>">
+						  </div>
+
+						  <input class="btn btn-lg btn-success btn-block" type="submit" value="Register" name="register" >
+
+					  </fieldset>
+				  </form>
+				  <center><b>Already registered ?</b> <br></b><a href="<?php echo base_url('user/login_view'); ?>">Login here</a></center><!--for centered text-->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</span>
+
+<!-- fh5co-blog-section -->
 		<footer>
 			<div id="footer">
 				<div class="container">
@@ -225,24 +189,5 @@ if(!$user_id){
 	<script src="<?=base_url()?>js/superfish.js"></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="<?=base_url()?>js/main.js"></script>
-	<script>
-	function myFunction() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("search");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("table");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[1];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}       
-		}
-	}
-	</script>
   </body>
 </html>

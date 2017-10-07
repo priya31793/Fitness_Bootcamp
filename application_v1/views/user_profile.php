@@ -82,9 +82,9 @@ if(!$user_id){
 				</div>
 				<div style="margin-left:20%;">
 					<iframe src="https://bmicalculatoraustralia.com/widgets/widget.php?t=720x300" width="720" height="300" frameborder="0"></iframe><p style=" font-family: sans-serif; font-size: 14px"> <a style="color: #009247;" href=""></a></p>
+					<p class="shift"><?php echo $this->calendar->generate($year,$month);?></p>
 				</div>
 				<br>
-				
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<div class="heading-section text-center animate-box">
@@ -146,18 +146,6 @@ if(!$user_id){
 						</div>
 			</div>
 		</div>
-		
-		<br>
-		<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<div class="heading-section text-center animate-box">
-							<h2>Video Series</h2>
-						</div>
-					</div>
-				</div>
-				<div style="margin-left:20%;">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/hI8oHhmuWkc" frameborder="0" allowfullscreen></iframe>
-				</div>
     </div>
   </div>
 </div>

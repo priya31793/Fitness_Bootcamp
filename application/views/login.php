@@ -35,14 +35,6 @@
 								<li class="active">
 									<a href="<?=base_url()?>home">Home</a>
 								</li>
-								<li>
-									<a href="classes.html" class="fh5co-sub-ddown">Classes</a>
-								</li>
-								<li>
-									<a href="schedule.html">Schedule</a>
-								</li>
-								<li><a href="trainer.html">Trainers</a></li>
-								<li><a href="<?=base_url()?>about">About</a></li>
 								<li><a href="<?=base_url()?>contact_add">Contact</a></li>
 							</ul>
 						</nav>
@@ -76,38 +68,46 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Login</h3>
                 </div>
-                <?php
-				  $success_msg= $this->session->flashdata('success_msg');
-				  $error_msg= $this->session->flashdata('error_msg');
-                  if($success_msg){
-                    ?>
-                    <div class="alert alert-success">
-                      <?php echo $success_msg; ?>
-                    </div>
-                  <?php
-                  }
-                  if($error_msg){
-                    ?>
-                    <div class="alert alert-danger">
-                      <?php echo $error_msg; ?>
-                    </div>
-                    <?php
-                  }
-                  ?>
+				
+                
                 <div class="panel-body">
+				<div id="body">
+			<?php
+			  $success_msg= $this->session->flashdata('success_msg');
+			  $error_msg= $this->session->flashdata('error_msg');
+			  if($success_msg){
+				?>
+				<div class="alert alert-success">
+				  <?php echo $success_msg; ?>
+				</div>
+			  <?php
+			  }
+			  if($error_msg){
+				?>
+				<div class="alert alert-danger">
+				  <?php echo $error_msg; ?>
+				</div>
+				<?php
+			}
+            ?>	
                     <form role="form" method="post" action="<?php echo base_url('user/login_user'); ?>">
                         <fieldset>
                             <div class="form-group"  >
+													  		<?php echo form_error('user_email','<span style="color:red;" class="error">','</span>')?>
+
                                 <input class="form-control" placeholder="E-mail" name="user_email" type="email" autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Password" name="user_password" type="password" value="">
+																				  		<?php echo form_error('user_password','<span style="color:red;" class="error">','</span>')?>
+
+                                <input class="form-control" placeholder="Password" name="user_password" type="password" >
                             </div>
                                 <input class="btn btn-lg btn-success btn-block" type="submit" value="login" name="login" >
                         </fieldset>
                     </form>
 					<center><b>Not registered ?</b> <br></b><a href="<?php echo base_url('user'); ?>">Register here</a></center><!--for centered text-->
                 </div>
+				</div>
             </div>
         </div>
     </div>

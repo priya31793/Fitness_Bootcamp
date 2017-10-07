@@ -54,14 +54,14 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['contact_add'] = 'contact';
 $route['contact_add/add'] = 'contact/add_contact';
-$route['contact_view'] = 'user/contact_view';
+$route['contact_view'] = 'contact/contact_view';
 $route['home'] = 'user/home';
 $route['about'] = 'user/about';
-$route['email'] = 'contact/email';
+
 //$route['map/view'] = "map"; 
 //$route['stud/add'] = 'Stud_controller/add_student'; 
 //$route['stud/add_view'] = 'Stud_controller/add_student_view'; 
 //$route['stud/edit/(\d+)'] = 'Stud_controller/update_student_view/$1'; 
-$route['contact_view/delete/(\d+)'] = 'user/delete_contact/$1';
+$route['contact_view/delete/(\d+)'] = 'contact/delete_contact/$1';
 $route['profiler'] = "Profiler_controller"; 
 $route['profiler/disable'] = "Profiler_controller/disable";

@@ -11,6 +11,12 @@
          } 
       } 
    
+      public function delete($id) { 
+         if ($this->db->delete("contact", "id = ".$id)) { 
+            return true; 
+         } 
+      } 
+   
       public function update($data,$id) { 
          $this->db->where("id", $id); 
 		 $this->db->update("contact", $data); 

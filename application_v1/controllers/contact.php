@@ -66,7 +66,8 @@ public function add_contact()
 		'name' => $this->input->post('name',TRUE),
 		'email' => $this->input->post('email',TRUE), 
 		'address' => $this->input->post('address',TRUE),
-		
+		'city' => $this->input->post('city'),
+		'state' => $this->input->post('state'),
 		'feedback' => $this->input->post('feedback',TRUE)			
 	 ); 
 	 
@@ -100,8 +101,25 @@ public function add_contact()
 	 redirect('contact_add');
 	}
   }
-public function email(){
 
-	$this->load->view("email.php");
+public function contact_view()
+{
+	 $this->load->library('table');
+	 $this->db->group_by("name");
+	 $query = $this->db->get("contact"); 
+	 $data['records'] = $query->result(); 
+	 $this->table->generate($query);
+	 $this->load->helper('url'); 
+	 $this->load->view('contact_view',$data);
 }
+
+public function delete_contact() { 
+	$this->load->model('Contact_Model'); 
+	$id = $this->uri->segment('3');
+	$this->db->group_by("name");
+	$this->Contact_Model->delete($id); 
+	$query = $this->db->get("contact");
+	$data['records'] = $query->result(); 
+	$this->load->view('contact_view',$data); 
+      }
 }

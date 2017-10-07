@@ -77,6 +77,24 @@
                       <h3 class="panel-title">Registration</h3>
                   </div>
                   <div class="panel-body">
+				  <?php
+			  $success_msg= $this->session->flashdata('success_msg');
+			  $error_msg= $this->session->flashdata('error_msg');
+			  if($success_msg){
+				?>
+				<div class="alert alert-success">
+				  <?php echo $success_msg; ?>
+				</div>
+			  <?php
+			  }
+			  if($error_msg){
+				?>
+				<div class="alert alert-danger">
+				  <?php echo $error_msg; ?>
+				</div>
+				<?php
+			}
+            ?>	
 				  <form role="form" method="post" action="<?php echo base_url('user/register_user'); ?>">
 					  <fieldset>
 						  <div class="form-group">							  
@@ -95,7 +113,7 @@
 
 						  <div class="form-group">
 						  	  <?php echo form_error('user_age','<span style="color:red;" class="error">','</span>')?>
-							  <input class="form-control" placeholder="Age" name="user_age" type="number" value="<?=set_value('user_age')?>">
+							  <input class="form-control" placeholder="Age" name="user_age" type="number" min=10 max=50 value="<?=set_value('user_age')?>">
 						  </div>
 
 						  <div class="form-group">

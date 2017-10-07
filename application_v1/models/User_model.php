@@ -42,15 +42,6 @@ public function email_check($email){
 
 }
 
-public function admin_view() {
-        $query = $this->db->get('contact');  
-         return $query;  
-    }
-public function delete($id) { 
-         if ($this->db->delete("contact", "id = ".$id)) { 
-            return true; 
-         } 
-      }
 
 }
 
