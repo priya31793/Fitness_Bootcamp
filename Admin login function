@@ -1,0 +1,24 @@
+      if ($this->form_validation->run())
+        {
+            $user   = $this->m_user->get_user_by_mail($this->input->post("login_mail"));
+            //Set session
+            $this->session->set_userdata(array('user' => $user));
+
+
+            if($user->is_admin == 1)
+                redirect('BackOffice');
+            else
+                redirect('FrontOffice');
+        }
+        else
+        {
+            $data["view"] = "home";
+            $this->layout->load_template($data); //This function do stuff an load a view
+        }
+In your case, you can't do that because your model doesn't return you an user but a num row. Just change
+
+return $query->num_rows();
+By
+
+return $query->row();
+And then you should be able to test if your user is an admin or not.
