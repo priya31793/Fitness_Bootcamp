@@ -180,8 +180,8 @@ public function update_contact_view() {
  
   public function send_mail() { 
 		$this->load->library('encrypt');
-		$from_email = "priya31793@gmail.com"; 
-		$user_password1 = "priya31793@";
+		$from_email = "DBfitness1587@gmail.com"; 
+		$user_password1 = "";
 		$username = "Priya Devanand";
 		$subject = "Password Reset";
 		// The mail sending protocol.
