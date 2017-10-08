@@ -51,6 +51,20 @@ public function delete($id) {
             return true; 
          } 
       }
+public function update($data,$id) { 
+ $this->db->where("id", $id); 
+ $this->db->update("contact", $data); 
+}
+
+//funtion to get email of user to send password
+ public function ForgotPassword($email)
+ {
+        $this->db->select('user_email');
+        $this->db->from('user'); 
+        $this->db->where('user_email', $email); 
+        $query=$this->db->get();
+        return $query->row_array();
+ }
 
 }
 

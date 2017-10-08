@@ -1,9 +1,10 @@
 <?php
 $user_id=$this->session->userdata('user_id');
 if(!$user_id){
+
   redirect('user/login_view');
 }
-?>
+ ?>
 <?php $this->load->view('header'); ?>
 <style>
   * {
@@ -41,7 +42,7 @@ if(!$user_id){
   background-color: #f1f1f1;
 }
 </style>
- <div id="fh5co-wrapper">
+  <div id="fh5co-wrapper">
 		<div id="fh5co-page">
 		<div id="fh5co-header">
 			<header id="fh5co-header-section">
@@ -55,7 +56,7 @@ if(!$user_id){
 								<li class="active">
 									<a href="<?=base_url()?>user/login_user"></a>
 								</li>
-								<li ><a href=""><?php echo $this->session->userdata('user_email');  ?></a></li>
+								<li ><a href="<?=base_url()?>user/profile.php"><?php echo $this->session->userdata('user_email');  ?></a></li>
 								<li><a class="btn btn-primary" href="<?php echo base_url('user/user_logout');?>" >  Logout</a>
 								</li>
 							</ul>
@@ -78,70 +79,43 @@ if(!$user_id){
 				</div>
 			</div>
 		</div><!-- end: fh5co-parallax -->
-		
-		<div class="container"><!-- container class is used to centered  the body of the browser with some decent width-->
+		<br>
+	<div class="container"><!-- container class is used to centered  the body of the browser with some decent width-->
 		<div class="row"><!-- row class is used for grid system in Bootstrap-->
-          <br>
-      
-		  
-	<div id="body">
-		<h2>Enquiry View</h2>
-		<input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-         <?php 
-		 
-            echo form_open('user/contact_view');
-			echo "<table border='0' cellpadding='4' id='table' cellspacing='0' width=100%>";
-            $i = 1; 
-            echo "<tr>"; 
-            echo "<td>S.No</td>"; 
-            echo "<td>Name</td>";
-            echo "<td>Email</td>";
-            echo "<td>Address</td>"; 
-            
-            echo "<td>Feedback</td>";
-            echo "<td>Edit</td>"; 
-            echo "<td>Delete</td>"; 
-            echo "</tr>"; 
-			if(!empty($records))
-    {
-      foreach($records as $r) // user is an object.
-      {	
-             
-               echo "<tr>"; 
-               echo "<td>".$i++."</td>"; 
-			   echo "<td>".$r->name."</td>"; 
-               echo "<td>".$r->email."</td>"; 
-               echo "<td>".$r->address."</td>";
-			   
-			   echo "<td>".$r->feedback."</td>"; 
-			   echo "<td><a href = '".base_url()."contact_view/edit/".$r->id."'>Edit</a></td>"; 
-               echo "<td><a href = '".base_url()."contact_view/delete/".$r->id."'>Delete</a></td>"; 
-               echo "</tr>"; 
-            } 
-	}
-			echo " </table>";
+          <div class="col-md-4 col-md-offset-4"><!--col-md-4 is used to create the no of colums in the grid also use for medimum and large devices-->
+              <div class="login-panel panel panel-success">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">Update Contact</h3>
+                  </div>
+		  <div class="panel-body">				 
+			<div id="body">	
+       <?php 
+            echo form_open('user/update_contact'); 
+            echo form_hidden('id',$records[0]->id);
+						echo "<div class='form-group'>";			
+
+			echo form_error('name','<span class="error">','</span>'); 
+			echo form_input(array('id'=>'name','class'=>"form-control",'name'=>'name','value'=>$records[0]->name)); 
+			echo "</div>";	
+            echo "<br/>";
+           			echo "<div class='form-group'>";			
+
+			echo form_error('email','<span class="error">','</span>'); 
+            echo form_input(array('id'=>'email','class'=>"form-control",'name'=>'email','value'=>$records[0]->email));
+			echo "</div>";		
+			echo "<br/>";
+						echo "<div class='form-group'>";			
+
+			echo form_error('address','<span class="error">','</span>');
+			echo form_input(array('id'=>'address','class'=>"form-control",'name'=>'address','value'=>$records[0]->address));			
+			echo "</div>";
+			echo "<br/>";
+			
+			echo form_submit(array('id'=>'submit','value'=>'Update','class'=>"btn btn-lg btn-success btn-block")); 
 			echo form_close();
-         ?>
-		<br><br>
-		</div></div></div>
-<script>
-	function myFunction() {
-	  var input, filter, table, tr, td, i;
-	  input = document.getElementById("search");
-	  filter = input.value.toUpperCase();
-	  table = document.getElementById("table");
-	  tr = table.getElementsByTagName("tr");
-	  for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[1];
-		if (td) {
-		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			tr[i].style.display = "";
-		  } else {
-			tr[i].style.display = "none";
-		  }
-		}       
-		}
-	}
-</script>
-<!-- Footer -->
+         ?> 	
+ </div>
+		</div>
+		</div></div></div></div>
+   <!-- Footer -->
 <?php $this->load->view('footer'); ?> 

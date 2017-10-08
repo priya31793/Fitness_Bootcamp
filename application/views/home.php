@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js"> <!--<![endif]-->
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DB Fitness</title>
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
-	<!-- Animate.css -->
-	<link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/bootstrap.css">
-	<!-- Superfish -->
-	<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/superfish.css">
-	<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/style.css">
-	<!-- Modernizr JS -->
-	<script type = 'text/javascript' src = "<?php echo base_url(); ?>js/modernizr-2.6.2.min.js"></script>
-  </head>
-  <body>
-  
+<?php $this->load->view('header'); ?> 
   <div id="fh5co-wrapper">
 		<div id="fh5co-page">
 		<div id="fh5co-header">
@@ -68,9 +46,6 @@
 				</div>
 			</div>
 		</div>
-		
-		
-		
 		<section id="home" class="section home">
 		<div id="fh5co-trainer-section" class="fh5co-lightgray-section">
 			<div class="container">
@@ -83,36 +58,31 @@
 				</div>
 					<div class="col-md-12 col-md-offset-0 animate-box">
 						<p>
-If you want to get in shape fast and stay in shape,then this could be just for you
-
-My name is da Buckley. I own DBFITNESS bootcamps and for the last 3 years I have been traveling around America training people and helping them get a fit lifestyle 
-
-Our workouts are quick fun inexpensive extremely effective and only take about 45mins and well have you looking amazing in no time no matter what shape you are in now
-						
+						If you want to get in shape fast and stay in shape,then this could be just for you
+						My name is da Buckley. I own DBFITNESS bootcamps and for the last 3 years I have been traveling around America training people and helping them get a fit lifestyle 
+						Our workouts are quick fun inexpensive extremely effective and only take about 45mins and well have you looking amazing in no time no matter what shape you are in now
 						</p>
 						<blockquote>
-						  <p>
-WITH OUR WORKOUTS YOU WILL <br>
-
-* have fun<br>
-* feel great <br>
-* lose weight<br>
-* tone up<br>
-* flatten you stomach <br>
-* and much more		<br>				  
-						  </p>
+						<p>
+						WITH OUR WORKOUTS YOU WILL <br>
+						* have fun<br>
+						* feel great <br>
+						* lose weight<br>
+						* tone up<br>
+						* flatten you stomach <br>
+						* and much more	<br>				  
+						</p>
 						</blockquote>
 						<p>
-It is important to you that you get the results you want and deserve and have fun while getting them workouts will vary to keep it fun and you body guessing and our workouts are extremely affordable for everyone 
-
-There is absolutely no reason to pay such high cost for a personal trainer when you can get better results at a much lower cost  so come join DBFITNESS and lets get results together
+						It is important to you that you get the results you want and deserve and have fun while getting them workouts will vary to keep it fun and you body guessing and our workouts are extremely affordable for everyone 
+						There is absolutely no reason to pay such high cost for a personal trainer when you can get better results at a much lower cost  so come join DBFITNESS and lets get results together
 						</p>
 					</div>
 				</div>
 				</div>
 				</section>
-		<section id="class" class="section class">
-		<div id="fh5co-schedule-section" class="fh5co-lightgray-section">
+			<section id="class" class="section class">
+			<div id="fh5co-schedule-section" class="fh5co-lightgray-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
@@ -132,12 +102,8 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 						</ul>
 					</div>
 					<div class="row text-center">
-
 						<div class="col-md-12 schedule-container">
-
-							
 							<!-- END sched-content -->
-
 							<div class="schedule-content active" data-day="monday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
@@ -150,7 +116,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-dumbell.svg" alt="Cycling">
-										
 										<h3>Kick your Booty</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -158,7 +123,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/cardio.jpeg" alt="Cycling">
-										
 										<h3>Cardio Circuit</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -166,12 +130,10 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/nutri.jpeg" alt="">
-										
 										<h3>Nutrition</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
-								
 							</div>
 							<!-- END sched-content -->
 
@@ -179,7 +141,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-dumbell.svg" alt="Cycling">
-										
 										<h3>HIIT Workout</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -187,7 +148,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-yoga.svg" alt="">
-										
 										<h3>Yoga Programs</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -195,7 +155,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/cardio.jpeg" alt="">
-										
 										<h3>Cardio Circuit</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -203,7 +162,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/nutri.jpeg" alt="Cycling">
-										
 										<h3>Nutrition</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -215,7 +173,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-yoga.svg" alt="">
-										
 										<h3>Yoga Programs</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -223,7 +180,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-dumbell.svg" alt="Cycling">
-										
 										<h3>Kick your Booty</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -231,7 +187,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/nutri.jpeg" alt="Cycling">
-										
 										<h3>Nutrition</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -239,19 +194,16 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/cardio.jpeg" alt="">
-										
 										<h3>Cardio Circuit</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 							</div>
 							<!-- END sched-content -->
-
 							<div class="schedule-content" data-day="thursday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-dumbell.svg" alt="Cycling">
-										
 										<h3>HIIT Workout</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -259,7 +211,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/fit-yoga.svg" alt="">
-										
 										<h3>Yoga Programs</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -267,7 +218,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/cardio.jpeg" alt="">
-										
 										<h3>Cardio Circuit</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -275,7 +225,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/nutri.jpeg" alt="Cycling">
-										
 										<h3>Nutrition</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -303,7 +252,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
 										<img src="images/nutri.jpeg" alt="Cycling">
-										
 										<h3>Nutrition</h3>
 										<span>Da Buckley</span>
 									</div>
@@ -318,17 +266,12 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								</div>
 							</div>
 							<!-- END sched-content -->
-
-							
 						</div>
-
-						
 					</div>
 				</div>
 			</div>
 		</div>
 		</section >
-		
 		<div class="fh5co-parallax" style="background-image: url(images/f2.jpeg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
@@ -414,14 +357,16 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 		<section id="trainer" class="section trainer">
 		<div id="fh5co-team-section" class="fh5co-lightgray-section">
 			<div class="container">
-				<div class="row">
+			<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-						<div class="heading-section text-center animate-box">
+						<div style="margin-top:40px;" class="heading-section text-center animate-box">
 							<h2>Meet Our Trainer</h2>
-							<p>I have been a personal trainer since 2013 I have worked at goodlife gym in Balwyn Melbourne from 2013-2014 I have also ran bootcamps in Balwyn from 2014-2015 under Adonis fitness I have traveled to nurture my craft and knowledge learning new tricks along the way I am a very passionate and caring trainer and know what I have to do to get the best results for my clients - Daniel Buckley
-									</p>
 						</div>
 					</div>
+				</div>
+				<div class="col-md-12 col-md-offset-0 animate-box">
+					<p>I have been a personal trainer since 2013 I have worked at goodlife gym in Balwyn Melbourne from 2013-2014 I have also ran bootcamps in Balwyn from 2014-2015 under Adonis fitness I have traveled to nurture my craft and knowledge learning new tricks along the way I am a very passionate and caring trainer and know what I have to do to get the best results for my clients - Daniel Buckley
+					</p>
 				</div>
 				<div class="row text-center">
 					<div class="col-md-4 col-sm-6" style="margin-left:33%;">
@@ -439,8 +384,6 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 							</div>
 						</div>
 					</div>
-					
-
 				</div>
 			</div>
 		</div>
@@ -470,10 +413,8 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 						</div>
 					</div>
 				</div>
-				<div class="row" style="margin-left:30%;">
-					<div class="pricing" >
-					
-
+				<div class="row" style="margin-left:10%;">
+					<div class="pricing" style="width:90%" >
 					<div class="col-md-6 animate-box">
 						<div class="price-box animate-box">
 							<h2 class="pricing-plan">Basic</h2>
@@ -483,9 +424,10 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 								<li class="color">Cardio Circuit</li>
 								<br>
 								<br>
-								<br>
-								<li></li>
+								<li class=""></li>
 								
+								<li class=""></li>
+								<li></li>
 							</ul>
 							<a href="<?=base_url()?>user/login_view" class="btn btn-default">Register</a>
 						</div>
@@ -496,84 +438,18 @@ There is absolutely no reason to pay such high cost for a personal trainer when 
 							<h2 class="pricing-plan pricing-plan-offer">Intermediate <span>Best Offer</span></h2>
 							<div class="price"><sup class="currency">$</sup>20<small>/Session</small></div>
 							<ul class="classes">
-							
 								<li>HIIT Workout</li>
 						       <li class="color">Cardio Circuit</li>
-
 								<li >Kick your Booty</li>
 								<li class="color">Nutrition</li>
 								<br>
-								
 							</ul>
 							<a href="<?=base_url()?>user/login_view" class="btn btn-select-plan btn-sm">Register</a>
 						</div>
 					</div>
-
-					
 				</div>
 				</div>
 			</div>
 		</div>
-		
-		
-
-<!-- fh5co-blog-section -->
-		<footer>
-			<div id="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4 animate-box">
-							<h3 class="section-title">About Us</h3>
-							<p>
-							The objectives of DB Fitness are to promote and provide a diverse and exciting range of professionally-provided, affordable sporting and physical recreation participation opportunities for all of our members.
-							With a focus on your health and wellbeing, our programs are designed to increase your personal health and fitness in a friendly environment.
-							</p>
-						</div>
-
-						<div class="col-md-4 animate-box">
-							<h3 class="section-title">Our Address</h3>
-							<ul class="contact-info">
-								<li><i class="icon-map-marker"></i>DB Fitness, Penrith, NSW</li>
-								<li><i class="icon-phone"></i>+61 423 392 114</li>
-								<li><i class="icon-envelope"></i>DBfitness1587@gmail.com</li>
-								<li><i class="icon-globe2"></i><a href="#">www.dbfitness.com</a></li>
-							</ul>
-						</div>
-						<div class="col-md-4 animate-box">
-							<h3 class="section-title">We beleive in...</h3>
-							<p>"What we face may look insurmountable. But I learned something from all those years of training and competing. I learned something from all those sets and reps when I didn't think I could lift another ounce of weight. What I learned is that we are always stronger than we know." - Arnold Schwarzenegger</p>
-						</div>
-					</div>
-					<div class="row copy-right">
-						<div class="col-md-6 col-md-offset-3 text-center">
-							<p class="fh5co-social-icons">
-								<a href="#"><i class="icon-twitter2"></i></a>
-								<a href="https://www.facebook.com/DBfitness-1662780963766595/?ti=as"><i class="icon-facebook2"></i></a>
-								<a href="#"><i class="icon-instagram"></i></a>
-								<a href="#"><i class="icon-dribbble2"></i></a>
-								<a href="#"><i class="icon-youtube"></i></a>
-							</p>
-							<p>Copyright 2018 <a href="#">DB Fitness</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-</div>
-</div>
-	<script src="<?=base_url()?>js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="<?=base_url()?>js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="<?=base_url()?>js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="<?=base_url()?>js/jquery.waypoints.min.js"></script>
-	<!-- Stellar -->
-	<script src="<?=base_url()?>js/jquery.stellar.min.js"></script>
-	<!-- Superfish -->
-	<script src="<?=base_url()?>js/hoverIntent.js"></script>
-	<script src="<?=base_url()?>js/superfish.js"></script>
-	<!-- Main JS (Do not remove) -->
-	<script src="<?=base_url()?>js/main.js"></script>
-  </body>
-</html>
+<!-- Footer -->
+<?php $this->load->view('footer'); ?> 

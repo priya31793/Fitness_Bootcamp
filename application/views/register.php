@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js"> <!--<![endif]-->
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>DB Fitness</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
-	<!-- Animate.css -->
-	<link rel = "stylesheet" type = "text/css" href = "<?php echo base_url(); ?>css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/bootstrap.css">
-	<!-- Superfish -->
-	<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/superfish.css">
-	<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/style.css">
-	<!-- Modernizr JS -->
-	<script type = 'text/javascript' src = "<?php echo base_url(); ?>js/modernizr-2.6.2.min.js"></script>
-  </head>
-  <body>
+<?php $this->load->view('header'); ?>
   <div id="fh5co-wrapper">
 		<div id="fh5co-page">
 		<div id="fh5co-header">
@@ -78,23 +56,23 @@
                   </div>
                   <div class="panel-body">
 				  <?php
-			  $success_msg= $this->session->flashdata('success_msg');
-			  $error_msg= $this->session->flashdata('error_msg');
-			  if($success_msg){
-				?>
-				<div class="alert alert-success">
-				  <?php echo $success_msg; ?>
-				</div>
-			  <?php
-			  }
-			  if($error_msg){
-				?>
-				<div class="alert alert-danger">
-				  <?php echo $error_msg; ?>
-				</div>
-				<?php
-			}
-            ?>	
+					  $success_msg= $this->session->flashdata('success_msg');
+					  $error_msg= $this->session->flashdata('error_msg');
+					  if($success_msg){
+						?>
+						<div class="alert alert-success">
+						  <?php echo $success_msg; ?>
+						</div>
+					  <?php
+					  }
+					  if($error_msg){
+						?>
+						<div class="alert alert-danger">
+						  <?php echo $error_msg; ?>
+						</div>
+						<?php
+						}
+				  ?>	
 				  <form role="form" method="post" action="<?php echo base_url('user/register_user'); ?>">
 					  <fieldset>
 						  <div class="form-group">							  
@@ -110,19 +88,15 @@
 						  	 <?php echo form_error('user_password','<span style="color:red;" class="error">','</span>')?>
 							  <input class="form-control" placeholder="Password" value="" name="user_password" type="password" value="">
 						  </div>
-
 						  <div class="form-group">
 						  	  <?php echo form_error('user_age','<span style="color:red;" class="error">','</span>')?>
 							  <input class="form-control" placeholder="Age" name="user_age" type="number" min=10 max=50 value="<?=set_value('user_age')?>">
 						  </div>
-
 						  <div class="form-group">
 						  		<?php echo form_error('user_mobile','<span style="color:red;" class="error">','</span>')?>
 							  <input class="form-control" placeholder="Mobile No" name="user_mobile" type="number" value="<?=set_value('user_mobile')?>">
 						  </div>
-
 						  <input class="btn btn-lg btn-success btn-block" type="submit" value="Register" name="register" >
-
 					  </fieldset>
 				  </form>
 				  <center><b>Already registered ?</b> <br></b><a href="<?php echo base_url('user/login_view'); ?>">Login here</a></center><!--for centered text-->
@@ -132,80 +106,5 @@
       </div>
   </div>
 </span>
-
-<!-- fh5co-blog-section -->
-		<footer>
-			<div id="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4 animate-box">
-							<h3 class="section-title">About Us</h3>
-							<p>
-							The objectives of DB Fitness are to promote and provide a diverse and exciting range of professionally-provided, affordable sporting and physical recreation participation opportunities for all of our members.
-							With a focus on your health and wellbeing, our programs are designed to increase your personal health and fitness in a friendly environment.
-							</p>
-						</div>
-
-						<div class="col-md-4 animate-box">
-							<h3 class="section-title">Our Address</h3>
-							<ul class="contact-info">
-								<li><i class="icon-map-marker"></i>University of Technology Sydney</li>
-								<li><i class="icon-phone"></i>+ 1235 2355 98</li>
-								<li><i class="icon-envelope"></i>DBfitness1587@gmail.com</li>
-								<li><i class="icon-globe2"></i><a href="#">www.dbfitness.com</a></li>
-							</ul>
-						</div>
-						<div class="col-md-4 animate-box">
-							<h3 class="section-title">Drop us a line</h3>
-							<form class="contact-form">
-								<div class="form-group">
-									<label for="name" class="sr-only">Name</label>
-									<input type="name" class="form-control" id="name" placeholder="Name">
-								</div>
-								<div class="form-group">
-									<label for="email" class="sr-only">Email</label>
-									<input type="email" class="form-control" id="email" placeholder="Email">
-								</div>
-								<div class="form-group">
-									<label for="message" class="sr-only">Message</label>
-									<textarea class="form-control" id="message" rows="7" placeholder="Message"></textarea>
-								</div>
-								<div class="form-group">
-									<input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="Send Message">
-								</div>
-							</form>
-						</div>
-					</div>
-					<div class="row copy-right">
-						<div class="col-md-6 col-md-offset-3 text-center">
-							<p class="fh5co-social-icons">
-								<a href="#"><i class="icon-twitter2"></i></a>
-								<a href="https://www.facebook.com/DBfitness-1662780963766595/?ti=as"><i class="icon-facebook2"></i></a>
-								<a href="#"><i class="icon-instagram"></i></a>
-								<a href="#"><i class="icon-dribbble2"></i></a>
-								<a href="#"><i class="icon-youtube"></i></a>
-							</p>
-							<p>Copyright 2017 <a href="#">DB Fitness</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-</div>
-</div>
-	<script src="<?=base_url()?>js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="<?=base_url()?>js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="<?=base_url()?>js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="<?=base_url()?>js/jquery.waypoints.min.js"></script>
-	<!-- Stellar -->
-	<script src="<?=base_url()?>js/jquery.stellar.min.js"></script>
-	<!-- Superfish -->
-	<script src="<?=base_url()?>js/hoverIntent.js"></script>
-	<script src="<?=base_url()?>js/superfish.js"></script>
-	<!-- Main JS (Do not remove) -->
-	<script src="<?=base_url()?>js/main.js"></script>
-  </body>
-</html>
+<!-- Footer -->
+<?php $this->load->view('footer'); ?> 

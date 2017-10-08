@@ -54,11 +54,9 @@ public function add_contact()
 	$this->load->library('form_validation');
 	$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 	//Validating Name Field
-	$this->form_validation->set_rules('name', 'Name', 'required|min_length[5]|max_length[15]');
+	$this->form_validation->set_rules('name', 'Name', 'required|min_length[5]|max_length[25]');
 	//Validating Email Field
 	$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-	//Validating Address Field
-	$this->form_validation->set_rules('address', 'Address', 'required|min_length[10]|max_length[50]');
 	//Validating Feedback. Field
 	$this->form_validation->set_rules('feedback', 'Feedback.', 'required|min_length[10]|max_length[150]');
 	 
@@ -95,13 +93,9 @@ public function add_contact()
 	{
 	 $this->db->group_by("name");
 	 $q = $this->Contact_Model->insert($data);
-	  $this->session->set_flashdata('success_msg', 'Submitted successfully!.');
-	 
+	 $this->session->set_flashdata('success_msg', 'Submitted successfully!.');
 	 redirect('contact_add');
 	}
   }
-public function email(){
 
-	$this->load->view("email.php");
-}
 }
