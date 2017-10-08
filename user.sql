@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2017 at 02:39 AM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.0.22
+-- Generation Time: Oct 08, 2017 at 08:19 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -42,7 +40,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_name`, `user_email`, `user_password`, `user_age`, `user_mobile`) VALUES
-(25, 'Priya Dev', 'priya31793@gmail.com', '0b1c8bc395a9588a79cd3c191c22a6b4', 25, 414936388);
+(1, 'Priya Naag', 'priya31793@gmail.com', '0b1c8bc395a9588a79cd3c191c22a6b4', 25, 414936388),
+(2, 'Naag', 'priya31793@gmail.com', '9fdc8b3f3027472d64e26a8e88fa2727', 25, 414936388),
+(3, 'abhishek', 'abhishek@gmail.com', '202cb962ac59075b964b07152d234b70', 27, 12345678),
+(4, 'asdf', 'asdf@example.com', '912ec803b2ce49e4a541068d495ab570', -47, -22),
+(5, 'Admin', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 24, 111111111);
 
 --
 -- Indexes for dumped tables
@@ -62,9 +64,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-COMMIT;
-
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

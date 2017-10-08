@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 09, 2017 at 02:40 AM
--- Server version: 10.1.26-MariaDB
--- PHP Version: 7.0.22
+-- Generation Time: Oct 08, 2017 at 08:19 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -25,34 +23,39 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `student`
+-- Table structure for table `contact`
 --
 
-CREATE TABLE `student` (
+CREATE TABLE `contact` (
   `id` int(20) NOT NULL,
   `name` text NOT NULL,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `address` text CHARACTER SET utf8 NOT NULL,
-  `city` text CHARACTER SET utf8 NOT NULL,
-  `state` varchar(20) NOT NULL,
   `feedback` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `student`
+-- Dumping data for table `contact`
 --
 
-INSERT INTO `student` (`id`, `name`, `email`, `address`, `city`, `state`, `feedback`) VALUES
-(112, 'Priya Naag', 'prinag@gmail.com', 'bgvcbvnvbnbvnbnbvn', 'bvnbvnbvnbvnbvn', 'vbnvbnvbnvbnvbn', 'vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv');
+INSERT INTO `contact` (`id`, `name`, `email`, `address`, `feedback`) VALUES
+(6, 'Priya devanand', 'priya31793@gmail.com', 'Lidcombe, New South Wales, Australia', 'Enquiry about fee structure'),
+(7, 'Priya Naag', 'naag@gmail.com', 'Lidcombe, New South Wales, Australia', 'Service is not good '),
+(9, 'Aswin ', 'aswin@gmail.com', 'Parramatta Road, Haberfield, New South Wales, Australia', 'Service is not good'),
+(10, 'Naag Algates', 'naag@gmail.com', 'Strathfield, New South Wales, Australia', 'Is there any job vacancy in your Gym'),
+(12, 'Pooja Ganesh', 'ganesha@gmail.com', 'Strathfield, New South Wales, Australia', 'Need more information about payment'),
+(13, 'bnvnbvnn', 'vvn@gmail.com', 'Potts Point, New South Wales, Australia', 'cvc xvxcvxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'),
+(14, 'vnbvnvnbvnbvnv', 'nvvnvvn@gmail.com', 'Flemington, Homebush West, New South Wales, Australia', 'hfvnvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv'),
+(15, 'gncb bnc bc', 'gcvhv@gmail.com', 'Remise Havenstraat GVB, Havenstraat, Amsterdam, Netherlands', 'xcv cxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `student`
+-- Indexes for table `contact`
 --
-ALTER TABLE `student`
+ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -60,12 +63,10 @@ ALTER TABLE `student`
 --
 
 --
--- AUTO_INCREMENT for table `student`
+-- AUTO_INCREMENT for table `contact`
 --
-ALTER TABLE `student`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
-COMMIT;
-
+ALTER TABLE `contact`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
