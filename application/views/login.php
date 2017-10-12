@@ -6,14 +6,14 @@
 				<div class="container">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="login.php">DB &nbsp;<span>Fitness</span></a></h1>
+						<h1 id="fh5co-logo"><a href="<?=base_url()?>home">DB &nbsp;<span>Fitness</span></a></h1>
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li>
 									<a href="<?=base_url()?>home"><b>Home</b></a>
 								</li>
-								<li><a href="<?=base_url()?>contact_add"><b>Contact</b></a></li>
+								<li><a href="<?=base_url()?>home#contact"><b>Contact</b></a></li>
 								<li class="active"><a href="<?=base_url()?>user/login_view"><b>Sign in </b></a></li>
 							</ul>
 						</nav>
@@ -74,7 +74,7 @@
                             </div>
                             <div class="form-group">
 								<?php echo form_error('user_password','<span style="color:red;" class="error">','</span>')?>
-                                <input class="form-control" placeholder="Password" name="user_password" type="password" >
+                                <input class="form-control" placeholder="Password" name="user_password" type="password" required >
                             </div>
                                 <input class="btn btn-lg btn-success btn-block" type="submit" value="login" name="login" >
                         </fieldset>
@@ -98,7 +98,7 @@
         <?php 
 		  echo $this->session->flashdata('message'); 
           echo $this->session->flashdata('msg'); 
-          echo form_open('user/send_mail'); 
+          echo form_open('user/ForgotPassword'); 
         ?> 
 	  <table class="table table-bordered table-hover table-striped">                                      
 			<tbody>

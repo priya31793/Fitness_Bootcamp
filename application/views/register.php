@@ -6,22 +6,15 @@
 				<div class="container">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="register.php">DB &nbsp;<span>Fitness</span></a></h1>
+						<h1 id="fh5co-logo"><a href="<?=base_url()?>home">DB &nbsp;<span>Fitness</span></a></h1>
 						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
-								<li class="active">
-									<a href="<?=base_url()?>home">Home</a>
-								</li>
 								<li>
-									<a href="classes.html" class="fh5co-sub-ddown">Classes</a>
+									<a href="<?=base_url()?>home"><b>Home</b></a>
 								</li>
-								<li>
-									<a href="schedule.html">Schedule</a>
-								</li>
-								<li><a href="trainer.html">Trainers</a></li>
-								<li><a href="<?=base_url()?>about">About</a></li>
-								<li><a href="<?=base_url()?>contact_add">Contact</a></li>
+								<li><a href="<?=base_url()?>home#contact"><b>Contact</b></a></li>
+								<li class="active"><a href="<?=base_url()?>user"><b>Register </b></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -94,7 +87,7 @@
 						  </div>
 						  <div class="form-group">
 						  		<?php echo form_error('user_mobile','<span style="color:red;" class="error">','</span>')?>
-							  <input class="form-control" placeholder="Mobile No" name="user_mobile" type="number" value="<?=set_value('user_mobile')?>">
+							  <input class="form-control" placeholder='10 Digit Mobile No.' name="user_mobile"  value="<?=set_value('user_mobile')?>">
 						  </div>
 						  <input class="btn btn-lg btn-success btn-block" type="submit" value="Register" name="register" >
 					  </fieldset>

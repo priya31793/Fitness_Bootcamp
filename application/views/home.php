@@ -7,7 +7,7 @@
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 						<h1 id="fh5co-logo"><a href="<?=base_url()?>home">DB &nbsp;<span>Fitness</span></a></h1>
-						<!-- START #fh5co-menu-wrap -->
+						<!-- Start Menu -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li class="active">
@@ -21,18 +21,17 @@
 									<a data-scroll href="#class">Schedule</a>
 								</li>
 								<li><a data-scroll href="#trainer">Trainers</a></li>
-								<li><a href="<?=base_url()?>contact_add">Contact</a></li>
+								<li><a href="#contact">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
 				</div>
 			</header>		
 		</div>
-
-		<!-- end:fh5co-header -->
+		<!-- Header -->
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image:url('images/5.jpg');">
+			<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image:url(<?php echo base_url(); ?>images/5.jpg);">
 				<div class="desc animate-box">
 					<div class="container">
 						<div class="row">
@@ -46,6 +45,8 @@
 				</div>
 			</div>
 		</div>
+		<!-- Header ends -->
+		<!-- About US -->
 		<section id="home" class="section home">
 		<div id="fh5co-trainer-section" class="fh5co-lightgray-section">
 			<div class="container">
@@ -80,7 +81,9 @@
 					</div>
 				</div>
 				</div>
-				</section>
+			</section>
+			<!-- About us ends -->
+			<!-- Class Schedule starts -->
 			<section id="class" class="section class">
 			<div id="fh5co-schedule-section" class="fh5co-lightgray-section">
 			<div class="container">
@@ -103,11 +106,11 @@
 					</div>
 					<div class="row text-center">
 						<div class="col-md-12 schedule-container">
-							<!-- END sched-content -->
+							<!-- START sched-content -->
 							<div class="schedule-content active" data-day="monday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/fit-yoga.svg" alt="">
+										<img src="<?php echo base_url(); ?>images/fit-yoga.svg" alt="">
 										
 										<h3>"Yoga Program"</h3>
 										<span>Da Buckley</span>
@@ -115,127 +118,128 @@
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/fit-dumbell.svg" alt="Cycling">
+										<img src="<?php echo base_url(); ?>images/fit-dumbell.svg" alt="Cycling">
 										<h3>Kick your Booty</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/cardio.jpeg" alt="Cycling">
+										<img src="<?php echo base_url(); ?>images/cardio.jpeg" alt="Cycling">
 										<h3>Cardio Circuit</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/nutri.jpeg" alt="">
+										<img src="<?php echo base_url(); ?>images/nutri.jpeg" alt="">
 										<h3>Nutrition</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 							</div>
 							<!-- END sched-content -->
-
+							<!-- Start sched-content -->
 							<div class="schedule-content" data-day="tuesday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/fit-dumbell.svg" alt="Cycling">
+										<img src="<?php echo base_url(); ?>images/fit-dumbell.svg" alt="Cycling">
 										<h3>HIIT Workout</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/fit-yoga.svg" alt="">
+										<img src="<?php echo base_url(); ?>images/fit-yoga.svg" alt="">
 										<h3>Yoga Programs</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/cardio.jpeg" alt="">
+										<img src="<?php echo base_url(); ?>images/cardio.jpeg" alt="">
 										<h3>Cardio Circuit</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/nutri.jpeg" alt="Cycling">
+										<img src="<?php echo base_url(); ?>images/nutri.jpeg" alt="Cycling">
 										<h3>Nutrition</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 							</div>
 							<!-- END sched-content -->
-
+							<!-- Start sched-content -->
 							<div class="schedule-content" data-day="wednesday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/fit-yoga.svg" alt="">
+										<img src="<?php echo base_url(); ?>images/fit-yoga.svg" alt="">
 										<h3>Yoga Programs</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/fit-dumbell.svg" alt="Cycling">
+										<img src="<?php echo base_url(); ?>images/fit-dumbell.svg" alt="Cycling">
 										<h3>Kick your Booty</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/nutri.jpeg" alt="Cycling">
+										<img src="<?php echo base_url(); ?>images/nutri.jpeg" alt="Cycling">
 										<h3>Nutrition</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/cardio.jpeg" alt="">
+										<img src="<?php echo base_url(); ?>images/cardio.jpeg" alt="">
 										<h3>Cardio Circuit</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 							</div>
 							<!-- END sched-content -->
+							<!-- Start sched-content - Thursday-->
 							<div class="schedule-content" data-day="thursday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/fit-dumbell.svg" alt="Cycling">
+										<img src="<?php echo base_url(); ?>images/fit-dumbell.svg" alt="Cycling">
 										<h3>HIIT Workout</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/fit-yoga.svg" alt="">
+										<img src="<?php echo base_url(); ?>images/fit-yoga.svg" alt="">
 										<h3>Yoga Programs</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/cardio.jpeg" alt="">
+										<img src="<?php echo base_url(); ?>images/cardio.jpeg" alt="">
 										<h3>Cardio Circuit</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/nutri.jpeg" alt="Cycling">
+										<img src="<?php echo base_url(); ?>images/nutri.jpeg" alt="Cycling">
 										<h3>Nutrition</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 							</div>
 							<!-- END sched-content -->
-
+							<!-- Start sched-content - Friday-->
 							<div class="schedule-content" data-day="friday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/fit-yoga.svg" alt="">
+										<img src="<?php echo base_url(); ?>images/fit-yoga.svg" alt="">
 										
 										<h3>Yoga Programs</h3>
 										<span>Da Buckley</span>
@@ -243,7 +247,7 @@
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/fit-dumbell.svg" alt="Cycling">
+										<img src="<?php echo base_url(); ?>images/fit-dumbell.svg" alt="Cycling">
 										
 										<h3>Kick your Booty</h3>
 										<span>Da Buckley</span>
@@ -251,14 +255,14 @@
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/nutri.jpeg" alt="Cycling">
+										<img src="<?php echo base_url(); ?>images/nutri.jpeg" alt="Cycling">
 										<h3>Nutrition</h3>
 										<span>Da Buckley</span>
 									</div>
 								</div>
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
-										<img src="images/cardio.jpeg" alt="">
+										<img src="<?php echo base_url(); ?>images/cardio.jpeg" alt="">
 										
 										<h3>Cardio Circuit</h3>
 										<span>Da Buckley</span>
@@ -272,7 +276,8 @@
 			</div>
 		</div>
 		</section >
-		<div class="fh5co-parallax" style="background-image: url(images/f2.jpeg);" data-stellar-background-ratio="0.5">
+		<!-- Start: Commit to be fit -->
+		<div class="fh5co-parallax" style="background-image: url(<?php echo base_url(); ?>images/f2.jpeg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
@@ -284,7 +289,9 @@
 					</div>
 				</div>
 			</div>
-		</div><!-- end: fh5co-parallax -->
+		</div>
+		<!-- end: commit to be fit -->
+		<!-- start: programs -->
 		<section id="program" class="section program">
 		<div id="fh5co-programs-section">
 			<div class="container">
@@ -298,7 +305,7 @@
 				<div class="row text-center">
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/fit-dumbell.svg" alt="Cycling">
+							<img src="<?php echo base_url(); ?>images/fit-dumbell.svg" alt="Cycling">
 							<h3>HIIT Workout</h3>
 							<p>
 							HIGH INTENSITY INTERVAL training (HIIT) designed to torch maximum calories in minimum amount of time.
@@ -309,7 +316,7 @@
 					
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/cardio.jpeg" alt="">
+							<img src="<?php echo base_url(); ?>images/cardio.jpeg" alt="">
 							<h3>Cardio Circuit</h3>
 							<p>The 30-minute workout will get your heart rate up while strengthening your body without the use of equipment.
 							</p>
@@ -318,7 +325,7 @@
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/fit-swimming.svg" alt="">
+							<img src="<?php echo base_url(); ?>images/fit-swimming.svg" alt="">
 							<h3>Kick your Booty</h3>
 							<p>Quick, intense bursts of exercise, followed by short, active, recovery periods.
 							</p>
@@ -327,7 +334,7 @@
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/nutri.jpeg" alt="Cycling">
+							<img src="<?php echo base_url(); ?>images/nutri.jpeg" alt="Cycling">
 							<h3>Nutrition</h3>
 							<p>Customised nutritional advice on dietary habits</p>
 							<span><a href="<?=base_url()?>user/login_view" class="btn btn-default">Register</a></span>
@@ -336,7 +343,7 @@
 					
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/abs.jpeg" alt="">
+							<img src="<?php echo base_url(); ?>images/abs.jpeg" alt="">
 							<h3>Abs and Core</h3>
 							<p>Get rid of that stubborn belly fat and craft your chiselled abs.</p>
 							<span><a href="<?=base_url()?>user/login_view" class="btn btn-default">Register</a></span>
@@ -344,7 +351,7 @@
 					</div>
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/fit-yoga.svg" alt="">
+							<img src="<?php echo base_url(); ?>images/fit-yoga.svg" alt="">
 							<h3>Yoga Programs</h3>
 							<p> Train your Mind, Body and Soul with simple meditation </p>
 							<span><a href="<?=base_url()?>user/login_view" class="btn btn-default">Register</a></span>
@@ -354,6 +361,8 @@
 			</div>
 		</div>
 		</section>
+		<!-- end:programs -->
+		<!-- start: About Trainer -->
 		<section id="trainer" class="section trainer">
 		<div id="fh5co-team-section" class="fh5co-lightgray-section">
 			<div class="container">
@@ -370,7 +379,7 @@
 				</div>
 				<div class="row text-center">
 					<div class="col-md-4 col-sm-6" style="margin-left:33%;">
-						<div class="team-section-grid animate-box" style="background-image: url(images/personnal.jpeg);">
+						<div class="team-section-grid animate-box" style="background-image: url(<?php echo base_url(); ?>images/personnal.jpeg);">
 							<div class="overlay-section">
 								<div class="desc">
 									<h3>Daniel Buckley</h3>
@@ -388,7 +397,9 @@
 			</div>
 		</div>
 		</section>
-		<div class="fh5co-parallax" style="background-image: url(images/4.jpg);" data-stellar-background-ratio="0.5">
+		<!-- END Trainer -->
+		<!-- start: Offers -->
+		<div class="fh5co-parallax" style="background-image: url(<?php echo base_url(); ?>images/4.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
@@ -403,7 +414,9 @@
 					</div>
 				</div>
 			</div>
-		</div><!-- end: fh5co-parallax -->
+		</div>
+		<!-- end: offers -->
+		<!-- start: Pricing plan -->
 		<div id="fh5co-pricing-section" class="fh5co-pricing fh5co-lightgray-section">
 			<div class="container">
 				<div class="row">
@@ -451,5 +464,180 @@
 				</div>
 			</div>
 		</div>
-<!-- Footer -->
-<?php $this->load->view('footer'); ?> 
+		<!-- END Pricing plan -->
+		<!-- Google map -->
+		<iframe
+				width="600"
+				height="450"
+				frameborder="0" style="border:0; width:100%;"
+				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB8qHRtj6PEF2PtBhK9XP6jxqaQTsjvRHM
+				&q=UTS,Syney" allowfullscreen>
+		</iframe>
+		<!-- END Google map -->
+
+
+<!-- start Footer -->
+<section id="contact" class="section contact">
+<footer>
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 animate-box">
+							<h3 class="section-title">About Us</h3>
+							<p>
+							The objectives of DB Fitness are to promote and provide a diverse and exciting range of professionally-provided, affordable sporting and physical recreation participation opportunities for all of our members.
+							With a focus on your health and wellbeing, our programs are designed to increase your personal health and fitness in a friendly environment.
+							</p>
+						</div>
+
+						<div class="col-md-4 animate-box">
+							<h3 class="section-title">Our Address</h3>
+							<ul class="contact-info">
+								<li><i class="icon-map-marker"></i>University of Technology Sydney</li>
+								<li><i class="icon-phone"></i>+ 1235 2355 98</li>
+								<li><i class="icon-envelope"></i>DBfitness1587@gmail.com</li>
+								<li><i class="icon-globe2"></i><a href="#">www.dbfitness.com</a></li>
+							</ul>
+						</div>
+						<div class="col-md-4 animate-box">
+							<h3 class="section-title">Drop us a line</h3>
+							<?php
+			  $success_msg= $this->session->flashdata('success_msg');
+			  $error_msg= $this->session->flashdata('error_msg');
+			  if($success_msg){
+				?>
+				<div class="alert alert-success">
+				  <?php echo $success_msg; ?>
+				</div>
+			  <?php
+			  }
+			  if($error_msg){
+				?>
+				<div class="alert alert-danger">
+				  <?php echo $error_msg; ?>
+				</div>
+				<?php
+			}
+            ?>	
+			<?php
+            echo form_open('user/add_contact');
+			echo "<fieldset>";
+			echo "<div class='form-group'>";
+			echo form_error('name','<span style="color:red;" class="error">','</span>'); 
+            echo form_input(array('id'=>'name','name'=>'name','placeholder'=>"Name",'class'=>"form-control")); 
+			echo "</div>";
+            echo "<br/>"; 
+			echo "<div class='form-group'>";
+			echo form_error('email','<span style="color:red;" class="error">','</span>');
+            echo form_input(array('id'=>'email','name'=>'email','type'=>'email','placeholder'=>"Please Enter Email",'class'=>"form-control")); 
+			echo "</div>";
+            echo "<br/>"; 
+			echo"<div class='form-group' id='locationField'>";
+			echo form_error('address','<span style="color:red;" class="error">','</span>');
+			echo form_input(array('id'=>'autocomplete','name'=>'address','type'=>'text','onFocus'=>'geolocate()','placeholder'=>"Please Enter address",'class'=>"form-control")); 
+			echo "</div>";
+            echo "<br/>";
+			//echo "<br/>";
+			echo "<div class='form-group'>";			
+			echo form_error('feedback','<span  style="color:red;" class="error">','</span>');
+            echo form_textarea(array('id'=>'feedback','name'=>'feedback','placeholder'=>"Please Enter Feedback",'class'=>"form-control")); 
+			echo "</div>";
+            echo "<br/>";
+            echo form_submit(array('id'=>'submit','value'=>'Submit','class'=>"btn btn-lg btn-success btn-block")); 
+			echo "</fieldset>";
+            echo form_close(); 
+         ?> 
+		</div>
+	</div>
+			<div class="row copy-right">
+				<div class="col-md-6 col-md-offset-3 text-center">
+					<p class="fh5co-social-icons">
+						<a href="#"><i class="icon-twitter2"></i></a>
+						<a href="https://www.facebook.com/DBfitness-1662780963766595/?ti=as"><i class="icon-facebook2"></i></a>
+						<a href="#"><i class="icon-instagram"></i></a>
+						<a href="#"><i class="icon-dribbble2"></i></a>
+						<a href="#"><i class="icon-youtube"></i></a>
+					</p>
+					<p>Copyright 2017 <a href="#">DB Fitness</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</section>
+</div>
+</div>
+	<script src="<?=base_url()?>js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="<?=base_url()?>js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="<?=base_url()?>js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="<?=base_url()?>js/jquery.waypoints.min.js"></script>
+	<!-- Stellar -->
+	<script src="<?=base_url()?>js/jquery.stellar.min.js"></script>
+	<!-- Superfish -->
+	<script src="<?=base_url()?>js/hoverIntent.js"></script>
+	<script src="<?=base_url()?>js/superfish.js"></script>
+	<!-- Main JS (Do not remove) -->
+	<script src="<?=base_url()?>js/main.js"></script>
+	
+	<script>
+      var placeSearch, autocomplete;
+      var componentForm = {
+        street_number: 'short_name',
+        route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
+      };
+      function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {types: ['geocode']});
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+      }
+      function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
+        for (var component in componentForm) {
+          document.getElementById(component).value = '';
+          document.getElementById(component).disabled = false;
+        }
+        // Get each component of the address from the place details
+        // and fill the corresponding field on the form.
+        for (var i = 0; i < place.address_components.length; i++) {
+          var addressType = place.address_components[i].types[0];
+          if (componentForm[addressType]) {
+            var val = place.address_components[i][componentForm[addressType]];
+            document.getElementById(addressType).value = val;
+          }
+        }
+      }
+      // Bias the autocomplete object to the user's geographical location,
+      // as supplied by the browser's 'navigator.geolocation' object.
+      function geolocate() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var geolocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            var circle = new google.maps.Circle({
+              center: geolocation,
+              radius: position.coords.accuracy
+            });
+            autocomplete.setBounds(circle.getBounds());
+          });
+        }
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8qHRtj6PEF2PtBhK9XP6jxqaQTsjvRHM&libraries=places&callback=initAutocomplete"
+        async defer></script>
+  </body>
+</html>

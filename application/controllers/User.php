@@ -12,15 +12,17 @@ public function __construct(){
 
 public function index()
 {
-	 $this->load->view("register.php");
-	 $this->load->library('form_validation');
+	$this->load->view("register.php");
+	$this->load->library('form_validation');
 	$data = array();
-	$this->db->group_by("name");
+	$this->db->group_by("id");
 	$query = $this->db->get("contact"); 
 	$data['records'] = $query->result();
+	$this->load->view('home', $data); 
 } 
   
-public function register_user(){
+public function register_user()
+{
 	$email='';
 	$user=array(
 	  'user_name'=>$this->input->post('user_name'),
@@ -31,11 +33,10 @@ public function register_user(){
 	);
 
 	$email_check=$this->user_model->email_check($user['user_email']);
-	
 	$this->load->library('form_validation');
 	$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 	//Validating Name Field
-	$this->form_validation->set_rules('user_name', 'Username', 'trim|required');
+	$this->form_validation->set_rules('user_name', 'Username', 'required|min_length[5]|max_length[18]');
 	//Validating user Name Field
 	$this->form_validation->set_rules('user_email', 'Email', 'required|valid_email');
 	//Validating password Field
@@ -43,32 +44,36 @@ public function register_user(){
 	//Validating age Field
 	$this->form_validation->set_rules('user_age', 'Age', 'required|min_length[1]|max_length[3]');
 	//Validating user_mobile Field
-	$this->form_validation->set_rules('user_mobile', 'Mobile', 'required|min_length[1]|max_length[10]');
+	$this->form_validation->set_rules('user_mobile', 'Mobile', 'required|regex_match[/^[0-9]{10}$/]');
 	
-	if($this->form_validation->run() == FALSE) {
+	if($this->form_validation->run() == FALSE) 
+	{
 	  $this->load->view('register',$user);
 	}
-	else {
+	else 
+	{
 	  $this->user_model->register_user($user);
 	  $this->session->set_flashdata('success_msg', 'Registered successfully.Now login to your account.');
 	  redirect('user/login_view');
 	}
 }
 
-public function login_view(){
-
+public function login_view()
+{
 	$this->load->view("login.php");
 }
 
-function login_user(){
+public function login_user()
+{
 	$user_login=array(
 		'user_email'=>$this->input->post('user_email'),
 		'user_password'=>md5($this->input->post('user_password'))
     );
 
     $data=$this->user_model->login_user($user_login['user_email'],$user_login['user_password']);
-	if($data !=''){
-	$this->session->set_userdata('user_id',$data['user_id'],TRUE);
+	if($data !='')
+	{
+		$this->session->set_userdata('user_id',$data['user_id'],TRUE);
 		$this->session->set_userdata('user_email',$data['user_email'],TRUE);
 		$this->session->set_userdata('user_name',$data['user_name'],TRUE);
 		$this->session->set_userdata('user_age',$data['user_age'],TRUE);
@@ -81,12 +86,14 @@ function login_user(){
 	//Validating password Field
 	$this->form_validation->set_rules('user_password', 'user_password', 'required');
 	
-	if($this->form_validation->run() == FALSE) {
+	if($this->form_validation->run() == FALSE) 
+	{
 	  $this->session->set_flashdata('error_msg', 'Incorrect Username or Password.');
 		$this->load->view("login.php");
-	 }
+	}
 	
-	else if($user_login['user_email'] == "admin@gmail.com"){
+	else if($user_login['user_email'] == "admin@gmail.com")
+	{
 		$this->load->database();  
         //load the model  
         $this->load->model('User_model');  
@@ -98,75 +105,117 @@ function login_user(){
 		$query = $this->db->get("contact");
 		$data['records'] = $query->result();		 
          //return the data in view  
-        $this->load->view('contact_view', $data);
+        $this->load->view('admin.php', $data);
 	}
-	else {
-		
 		$this->load->view('user_profile.php',$data);		
-	}
-	
 }
 
-function user_profile(){
+public function ForgotPassword()
+{
+    $email = $this->input->post('user_email');
+    $findemail = $this->user_model->ForgotPassword($email);
+    if ($findemail) 
+	{
+        $this->user_model->sendpassword($findemail);
+    } else 
+	{
+        echo "<script>alert(' $email not found, please enter correct email id')</script>";
+        redirect(base_url() . 'user/login', 'refresh');
+    }
+}
 
+function user_profile()
+{
 	$this->load->view('user_profile.php',array());
-
 }
-public function user_logout(){
 
+public function user_logout()
+{
 	$this->session->sess_destroy();
 	redirect('user/login_view', 'refresh');
 }
 
-public function home(){
-
+public function home()
+{
 	$this->load->view("home.php");
 }
 
-public function about(){
-
+public function about()
+{
 	$this->load->view("about.php");
 }
 
-public function contact_view()
-{
-	 $this->load->database();  
-	 //load the model  
-	 $this->load->model('User_model');  
-	 //load the method of model  
-	$this->db->group_by("name");
-
-	 $data['records']=$this->user_model->admin_view();  
-	 //return the data in view  
-	 $this->load->view('contact_view', $data);
+public function add_contact() 
+{ 
+	$this->load->model('User_model');
+	$this->load->library('form_validation');
+	$this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+	//Validating Name Field
+	$this->form_validation->set_rules('name', 'Name', 'required|min_length[5]|max_length[18]');
+	//Validating Email Field
+	$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+	//Validating Feedback. Field
+	$this->form_validation->set_rules('feedback', 'Feedback.', 'required|min_length[10]|max_length[150]');
+	 
+	$data = array( 
+		'name' => $this->input->post('name',TRUE),
+		'email' => $this->input->post('email',TRUE), 
+		'address' => $this->input->post('address',TRUE),
+		'feedback' => $this->input->post('feedback',TRUE)			
+	 ); 
+	 
+	if ($this->form_validation->run() === FALSE)
+	{
+		$this->session->set_flashdata('error_msg', 'Please Enter all the Details.');
+		$this->load->view('home',$data);
+	}	
+	else
+	{
+		$this->db->group_by("name");
+		$q = $this->user_model->insert($data);
+		$this->session->set_flashdata('success_msg', 'Submitted successfully!.');
+		redirect('home','refresh');
+	}
+  }
+  
+public function add_contact_view() 
+{ 
+	$this->load->helper('form'); 
+	$this->load->view('contact_add','refresh'); 
 }
 
-public function delete_contact() { 
-	$this->load->model('User_model');  
-	$id = $this->uri->segment('3');
-	$this->db->group_by("name");
-	$this->user_model->delete($id); 
-	$query = $this->db->get("contact");
-	$data['records'] = $query->result(); 
-	$this->load->view('contact_view',$data); 
-      }
+public function admin_view()
+{
+	//load the database
+	 $this->load->database();  
+	 //load the model  
+	 $this->load->model('User_model');   
+	 $this->db->group_by("id");
+	 //load the method of model 
+	 $data['records']=$this->user_model->admin_view();  
+	 //return the data in view  
+	 $this->load->view('admin', $data);
+}
 	  
-public function update_contact_view() { 
+public function update_contact_view() 
+{ 
 	  $this->load->helper('form'); 
 	  $id = $this->uri->segment('3'); 
 	  $this->db->where("id", $id); 
 	  $this->db->group_by("name");
 	  $query = $this->db->get("contact");
-	  $data['records'] = $query->result(); 
+	  $data['records'] = $query->result();
+	  //return the data in view	  
 	  $this->load->view('contact_edit',$data); 
-      } 
+} 
   
- public function update_contact(){ 
-	  $data = array( 
-			'name' => $this->input->post('name'),
-			'email' => $this->input->post('email'), 
-			'address' => $this->input->post('address')		
-		);
+ public function update_contact()
+ { 
+	$data = array( 
+		'name' => $this->input->post('name'),
+		'email' => $this->input->post('email'), 
+		'address' => $this->input->post('address')		
+	);
 	
 	 $id = $this->input->post('id'); 
 	 $this->load->model('User_model');
@@ -174,71 +223,27 @@ public function update_contact_view() {
 	 $this->db->group_by("name");
 	 $query = $this->db->get("contact"); 
 	 $data['records'] = $query->result();
-	 $this->load->view('contact_view', $data);
-  } 
+	 $this->load->view('admin', $data);
+} 
 
+ public function delete_contact() 
+{ 
+	//load the model 
+	$this->load->model('User_model');  
+	$id = $this->uri->segment('3');
+	$this->db->group_by("id");
+	//load the method of model
+	$this->user_model->delete($id); 
+	$query = $this->db->get("contact");
+	$data['records'] = $query->result();
+	//return the data in view 	
+	$this->load->view('admin',$data); 
+}
  
-  public function send_mail() { 
-		$this->load->library('encrypt');
-		$from_email = "DBfitness1587@gmail.com"; 
-		$user_password1 = "";
-		$username = "Priya Devanand";
-		$subject = "Password Reset";
-		// The mail sending protocol.
-		$config['protocol'] = 'smtp';
-		// SMTP Server Address for Gmail.
-		$config['smtp_host'] = 'ssl://smtp.googlemail.com';
-		// SMTP Port - the port that you is required
-		$config['smtp_port'] = 465;
-		// SMTP Username like. (abc@gmail.com)
-		$config['smtp_user'] = $from_email;
-		// SMTP Password like (abc***##)
-		$config['smtp_pass'] = $user_password1;
-		$this->load->library('email', $config);
-		$email = $this->input->post('user_email');      
-        $findemail = $this->user_model->ForgotPassword($email);  
-		$to = $findemail['user_email'];
-		$query1=$this->db->query("SELECT * from user where user_email = '".$to."' ");
-        $row=$query1->result_array();
-        if ($query1->num_rows()>0)
-		{
-		$row=$query1->result_array();
-		$passwordplain = "";
-        $passwordplain  = rand(999999999,9999999999);
-        $newpass['user_password'] = md5($passwordplain);
-        $this->db->where('user_email', $to);
-        $this->db->update('user', $newpass); 
-		$mail_message='Dear '.$row[0]['user_name'].','. "\r\n";
-		$mail_message.=' '."\r\n";
-        $mail_message.='You have requested the new password, Here is your new password '.$passwordplain.''."\r\n";
-        $mail_message.='Please Update your password.'."\r\n";
-		$mail_message.=' '."\r\n";
-		$mail_message.=' '."\r\n";
-        $mail_message.='Thanks & Regards'."\r\n";
-        $mail_message.='DB Fitness Bootcamp'."\r\n"; 
- 
-		// Load email library and passing configured values to email library
-		$this->email->set_newline("\r\n");
-		// Sender email address
-		$this->email->from($from_email, $username);
-		// Receiver email address.for single email
-		$this->email->to($to);
-		//send multiple email
-		//$this->email->to(abc@gmail.com,xyz@gmail.com,jkl@gmail.com);
-		// Subject of email
-		$this->email->subject($subject);
-		// Message in email
-		$this->email->message($mail_message);
-		// It returns boolean TRUE or FALSE based on success or failure
-		$this->email->send();
-		$this->session->set_flashdata('message','Password has been reset and has been sent to email');		
-		redirect('user/login_view','refresh');        
-		}
-		else
-		{  
-		 $this->session->set_flashdata('msg','Email not found try again!');
-		 redirect('user/login_view','refresh');
-		}	 
-      } 
+	  
+
+
+
+
 }
 ?>

@@ -89,7 +89,7 @@ if(!$user_id){
 		<input type="text" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
          <?php 
 		 
-            echo form_open('user/contact_view');
+            echo form_open('user/admin_view');
 			echo "<table border='0' cellpadding='4' id='table' cellspacing='0' width=100%>";
             $i = 1; 
             echo "<tr>"; 
@@ -142,6 +142,8 @@ if(!$user_id){
 		}       
 		}
 	}
+	
+	
 </script>
 <!-- Footer -->
 <?php $this->load->view('footer'); ?> 

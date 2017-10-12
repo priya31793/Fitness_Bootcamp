@@ -12,6 +12,7 @@
         padding: 0;
       }
     </style>
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <style>
       #locationField, #controls {
         position: relative;
@@ -157,80 +158,153 @@
 		<div>
 			<?php echo $map['html']; ?>
 		</div>
+<!-- fh5co-blog-section -->
+		<footer>
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 animate-box">
+							<h3 class="section-title">About Us</h3>
+							<p>
+							The objectives of DB Fitness are to promote and provide a diverse and exciting range of professionally-provided, affordable sporting and physical recreation participation opportunities for all of our members.
+							With a focus on your health and wellbeing, our programs are designed to increase your personal health and fitness in a friendly environment.
+							</p>
+						</div>
 
-<script type="text/javascript">
-	var centreGot = false;
-</script>
-<?php echo $map['js']; ?>
-<script>
-  // This example displays an address form, using the autocomplete feature
-  // of the Google Places API to help users fill in the information.
+						<div class="col-md-4 animate-box">
+							<h3 class="section-title">Our Address</h3>
+							<ul class="contact-info">
+								<li><i class="icon-map-marker"></i>University of Technology Sydney</li>
+								<li><i class="icon-phone"></i>+ 1235 2355 98</li>
+								<li><i class="icon-envelope"></i>DBfitness1587@gmail.com</li>
+								<li><i class="icon-globe2"></i><a href="#">www.dbfitness.com</a></li>
+							</ul>
+						</div>
+						<div class="col-md-4 animate-box">
+							<h3 class="section-title">Drop us a line</h3>
+							<form class="contact-form">
+								<div class="form-group">
+									<label for="name" class="sr-only">Name</label>
+									<input type="name" class="form-control" id="name" placeholder="Name">
+								</div>
+								<div class="form-group">
+									<label for="email" class="sr-only">Email</label>
+									<input type="email" class="form-control" id="email" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<label for="message" class="sr-only">Message</label>
+									<textarea class="form-control" id="message" rows="7" placeholder="Message"></textarea>
+								</div>
+								<div class="form-group">
+									<input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="Send Message">
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row copy-right">
+						<div class="col-md-6 col-md-offset-3 text-center">
+							<p class="fh5co-social-icons">
+								<a href="#"><i class="icon-twitter2"></i></a>
+								<a href="https://www.facebook.com/DBfitness-1662780963766595/?ti=as"><i class="icon-facebook2"></i></a>
+								<a href="#"><i class="icon-instagram"></i></a>
+								<a href="#"><i class="icon-dribbble2"></i></a>
+								<a href="#"><i class="icon-youtube"></i></a>
+							</p>
+							<p>Copyright 2017 <a href="#">DB Fitness</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+</div>
+</div>
+	<script src="<?=base_url()?>js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="<?=base_url()?>js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="<?=base_url()?>js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="<?=base_url()?>js/jquery.waypoints.min.js"></script>
+	<!-- Stellar -->
+	<script src="<?=base_url()?>js/jquery.stellar.min.js"></script>
+	<!-- Superfish -->
+	<script src="<?=base_url()?>js/hoverIntent.js"></script>
+	<script src="<?=base_url()?>js/superfish.js"></script>
+	<!-- Main JS (Do not remove) -->
+	<script src="<?=base_url()?>js/main.js"></script>
+	<script type="text/javascript">
+		var centreGot = false;
+	</script>
+	<?php echo $map['js']; ?>
+	<script>
+      // This example displays an address form, using the autocomplete feature
+      // of the Google Places API to help users fill in the information.
 
-  // This example requires the Places library. Include the libraries=places
-  // parameter when you first load the API. For example:
-  // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-  var placeSearch, autocomplete;
-  var componentForm = {
-	street_number: 'short_name',
-	route: 'long_name',
-	locality: 'long_name',
-	administrative_area_level_1: 'short_name',
-	country: 'long_name',
-	postal_code: 'short_name'
-  };
+      var placeSearch, autocomplete;
+      var componentForm = {
+        street_number: 'short_name',
+        route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
+      };
 
-  function initAutocomplete() {
-	// Create the autocomplete object, restricting the search to geographical
-	// location types.
-	autocomplete = new google.maps.places.Autocomplete(
-		/** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
-		{types: ['geocode']});
+      function initAutocomplete() {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {types: ['geocode']});
 
-	// When the user selects an address from the dropdown, populate the address
-	// fields in the form.
-	autocomplete.addListener('place_changed', fillInAddress);
-  }
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress);
+      }
 
-  function fillInAddress() {
-	// Get the place details from the autocomplete object.
-	var place = autocomplete.getPlace();
+      function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
 
-	for (var component in componentForm) {
-	  document.getElementById(component).value = '';
-	  document.getElementById(component).disabled = false;
-	}
+        for (var component in componentForm) {
+          document.getElementById(component).value = '';
+          document.getElementById(component).disabled = false;
+        }
 
-	// Get each component of the address from the place details
-	// and fill the corresponding field on the form.
-	for (var i = 0; i < place.address_components.length; i++) {
-	  var addressType = place.address_components[i].types[0];
-	  if (componentForm[addressType]) {
-		var val = place.address_components[i][componentForm[addressType]];
-		document.getElementById(addressType).value = val;
-	  }
-	}
-  }
+        // Get each component of the address from the place details
+        // and fill the corresponding field on the form.
+        for (var i = 0; i < place.address_components.length; i++) {
+          var addressType = place.address_components[i].types[0];
+          if (componentForm[addressType]) {
+            var val = place.address_components[i][componentForm[addressType]];
+            document.getElementById(addressType).value = val;
+          }
+        }
+      }
 
-  // Bias the autocomplete object to the user's geographical location,
-  // as supplied by the browser's 'navigator.geolocation' object.
-  function geolocate() {
-	if (navigator.geolocation) {
-	  navigator.geolocation.getCurrentPosition(function(position) {
-		var geolocation = {
-		  lat: position.coords.latitude,
-		  lng: position.coords.longitude
-		};
-		var circle = new google.maps.Circle({
-		  center: geolocation,
-		  radius: position.coords.accuracy
-		});
-		autocomplete.setBounds(circle.getBounds());
-	  });
-	}
-  }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8qHRtj6PEF2PtBhK9XP6jxqaQTsjvRHM&libraries=places&callback=initAutocomplete"
-	async defer></script>
-<!-- Footer -->
-<?php $this->load->view('footer'); ?> 
+      // Bias the autocomplete object to the user's geographical location,
+      // as supplied by the browser's 'navigator.geolocation' object.
+      function geolocate() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var geolocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            var circle = new google.maps.Circle({
+              center: geolocation,
+              radius: position.coords.accuracy
+            });
+            autocomplete.setBounds(circle.getBounds());
+          });
+        }
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8qHRtj6PEF2PtBhK9XP6jxqaQTsjvRHM&libraries=places&callback=initAutocomplete"
+        async defer></script>
+  </body>
+</html>
