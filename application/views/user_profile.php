@@ -8,7 +8,78 @@
 <!-- Start: Header -->
 <?php $this->load->view('header'); ?>
 <!-- End: Header -->
+<style>
+/* CSS for responsive iframe */
+/* ========================= */
 
+/* outer wrapper: set max-width & max-height; max-height greater than padding-bottom % will be ineffective and height will = padding-bottom % of max-width */
+#Iframe-Family-History-Conference {
+  max-width: 600px;
+  max-height: 100%; 
+  overflow: hidden;
+}
+#Iframe-Google-Calendar {
+  max-height: 600px;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+/* inner wrapper: make responsive */
+.responsive-wrapper {
+  position: relative;
+  height: 0;    /* gets height from padding-bottom */
+  
+  /* put following styles (necessary for overflow and scrolling handling on mobile devices) inline in .responsive-wrapper around iframe because not stable in CSS:
+    -webkit-overflow-scrolling: touch; overflow: auto; */
+  
+}
+ 
+.responsive-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* padding-bottom = h/w as % -- sets aspect ratio */
+/* YouTube video aspect ratio */
+.responsive-wrapper-wxh-650x315 {
+  padding-bottom: 56.25%;
+}
+.responsive-wrapper-wxh-600x480 {
+  padding-bottom: 80%;
+}
+.responsive-wrapper-padding-bottom-75pct {
+  padding-bottom: 75%;
+}
+
+/* general styles */
+/* ============== */
+.set-border {
+  border: 5px inset #4f4f4f;
+}
+.set-box-shadow { 
+  -webkit-box-shadow: 4px 4px 14px #4f4f4f;
+  -moz-box-shadow: 4px 4px 14px #4f4f4f;
+  box-shadow: 4px 4px 14px #4f4f4f;
+}
+.set-padding {
+  padding: 40px;
+}
+.set-margin {
+  margin: 30px;
+}
+.center-block-horiz {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+</style>
  <div id="fh5co-wrapper">
 	<div id="fh5co-page">
 <!-- Start: Menu -->
@@ -137,10 +208,30 @@
 				</div>
 			</div>
 		</div>
-		<div style="margin-left:20%;">
+		<div class="col-md-6 animate-box" style="">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/hI8oHhmuWkc" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="col-md-6 animate-box"><iframe width="560" height="315" src="https://www.youtube.com/embed/ieyzL5OaPZk" frameborder="0" allowfullscreen></iframe>
+				</br></br></br>
 		</div>
 <!-- End: iFrame Video -->
+<!-- Start: Calender View -->
+		<div class="row">
+			<div class="">
+				<div class="heading-section text-center animate-box">
+					<h2>DB Fitness Calender</h2>
+				</div>
+				<div id="Iframe-Google-Calendar" class="set-margin set-padding set-border set-box-shadow center-block-horiz">
+				<div class="responsive-wrapper 
+				 responsive-wrapper-padding-bottom-75pct"
+				 style="-webkit-overflow-scrolling: touch; overflow: auto;">
+				<iframe src="https://calendar.google.com/calendar/embed?dbfitness1587@gmail.com&ctz=Australia"> 
+				</iframe>
+			</div>
+		</div>
+		</div>
+		</div>		
+<!-- End: Calender View -->
     </div>
   </div>
 </div>

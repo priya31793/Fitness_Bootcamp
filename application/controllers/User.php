@@ -141,7 +141,7 @@ public function ForgotPassword()
 /* User Profile Function */  
 function user_profile()
 {
-	$this->load->view('user_profile.php',array());
+	$this->load->view('user_profile.php','refresh');
 }
 
 /* User Logout Function */  
@@ -182,7 +182,7 @@ public function add_contact()
 	{
 		$this->session->set_flashdata('error_msg', 'Please Enter all the Details.');
 		//return the data in view 
-		$this->load->view('home',$data);
+		$this->load->view('home','refresh');
 	}	
 	else
 	{
