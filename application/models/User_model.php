@@ -1,11 +1,13 @@
 <?php
 class User_model extends CI_model{
 
+/* Insert data for user registration*/
 public function register_user($user)
 {
 	$this->db->insert('user', $user);
 }
 
+/* Fetch data to Login*/
 public function login_user($email,$pass)
 {
 	$this->db->select('*');
@@ -23,6 +25,7 @@ public function login_user($email,$pass)
 	}
 }
 
+/* Check email exist in Database*/
 public function email_check($email)
 {
 	$this->db->select('*');
@@ -39,12 +42,41 @@ public function email_check($email)
 	}
 }
 
+/* Check Password exist in database*/
+public function pass_check($pass)
+{
+	$this->db->select('user_password');
+	$this->db->from('user');
+	$this->db->where('user_password',$pass);
+	$query=$this->db->get();
+
+	if($query->num_rows()>0)
+	{
+		return false;
+	}else
+	{
+		return true;
+	}
+}
+
+/* Insert contact details */
+
+public function insert($data) 
+{
+	if ($this->db->insert("contact", $data)) 
+	{ 
+        return true; 
+	} 
+} 
+
+/* Fetch contact details */
 public function admin_view() 
 {
     $query = $this->db->get('contact');  
     return $query;  
 }
 
+/* Delete contact details */
 public function delete($id) 
 { 
     if ($this->db->delete("contact", "id = ".$id)) 
@@ -53,6 +85,7 @@ public function delete($id)
     } 
 }
 
+/* Update contact details */
 public function update($data,$id) 
 { 
 	$this->db->where("id", $id); 
@@ -68,15 +101,8 @@ public function ForgotPassword($email)
 	$query=$this->db->get();
 	return $query->row_array();
 }
-
-public function insert($data) 
-{
-	if ($this->db->insert("contact", $data)) 
-	{ 
-        return true; 
-	} 
-} 
 	  
+/* Send email for password reset */
 public function sendpassword($data) 
 { 
 	$this->load->helper('form');

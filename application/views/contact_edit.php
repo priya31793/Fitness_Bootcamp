@@ -1,11 +1,15 @@
+<!-- Check User Session -->
 <?php
-$user_id=$this->session->userdata('user_id');
-if(!$user_id){
-
-  redirect('user/login_view');
-}
- ?>
+	$user_id=$this->session->userdata('user_id');
+	if(!$user_id){
+	  redirect('user/login_view');
+	}
+?>
+<!-- Start: Header -->
 <?php $this->load->view('header'); ?>
+<!-- End: Header -->
+
+<!-- Start: Search box css -->
 <style>
   * {
   box-sizing: border-box;
@@ -42,21 +46,21 @@ if(!$user_id){
   background-color: #f1f1f1;
 }
 </style>
+<!-- End: Search box css -->
+
   <div id="fh5co-wrapper">
 		<div id="fh5co-page">
+		<!-- Start: Menu -->
 		<div id="fh5co-header">
 			<header id="fh5co-header-section">
 				<div class="container">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 						<h1 id="fh5co-logo"><a href="login.php">DB &nbsp;<span>Fitness</span></a></h1>
-						<!-- START #fh5co-menu-wrap -->
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
-								<li class="active">
-									<a href="<?=base_url()?>user/login_user"></a>
-								</li>
-								<li ><a href="<?=base_url()?>user/profile.php"><?php echo $this->session->userdata('user_email');  ?></a></li>
+								<li class="active"><a href="<?=base_url()?>user/login_user"></a></li>
+								<li><a href="<?=base_url()?>user/profile.php"><?php echo $this->session->userdata('user_email');  ?></a></li>
 								<li><a class="btn btn-primary" href="<?php echo base_url('user/user_logout');?>" >  Logout</a>
 								</li>
 							</ul>
@@ -65,7 +69,8 @@ if(!$user_id){
 				</div>
 			</header>		
 		</div>
-		<!-- end:fh5co-header -->
+<!-- End: Menu -->
+<!-- Start: Login Info  -->
 		<div class="fh5co-parallax" style="background-image: url(<?php echo base_url(); ?>images/c4.jpeg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
@@ -73,49 +78,53 @@ if(!$user_id){
 					<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
 						<div class="fh5co-intro fh5co-table-cell animate-box">
 							<h1 class="text-center"><?php echo $this->session->userdata('user_name'); ?></h1>
-							
 						</div>
 					</div>
 				</div>
 			</div>
-		</div><!-- end: fh5co-parallax -->
-		<br>
-	<div class="container"><!-- container class is used to centered  the body of the browser with some decent width-->
-		<div class="row"><!-- row class is used for grid system in Bootstrap-->
-          <div class="col-md-4 col-md-offset-4"><!--col-md-4 is used to create the no of colums in the grid also use for medimum and large devices-->
+		</div><br>
+<!-- End: Login Info  -->	
+	<div class="container">
+	<!-- container class is used to centered  the body of the browser with some decent width-->
+		<div class="row">
+		<!-- row class is used for grid system in Bootstrap-->
+          <div class="col-md-4 col-md-offset-4">
+		  <!--col-md-4 is used to create the no of colums in the grid also use for medimum and large devices-->
               <div class="login-panel panel panel-success">
                   <div class="panel-heading">
                       <h3 class="panel-title">Update Contact</h3>
                   </div>
-		  <div class="panel-body">				 
-			<div id="body">	
-       <?php 
-            echo form_open('user/update_contact'); 
-            echo form_hidden('id',$records[0]->id);
+			  <div class="panel-body">				 
+				<div id="body">	
+				   <!-- End: Update Contact Page -->
+				   <?php 
+						echo form_open('user/update_contact'); 
+						echo form_hidden('id',$records[0]->id);
 						echo "<div class='form-group'>";			
-
-			echo form_error('name','<span class="error">','</span>'); 
-			echo form_input(array('id'=>'name','class'=>"form-control",'name'=>'name','value'=>$records[0]->name)); 
-			echo "</div>";	
-            echo "<br/>";
-           			echo "<div class='form-group'>";			
-
-			echo form_error('email','<span class="error">','</span>'); 
-            echo form_input(array('id'=>'email','class'=>"form-control",'name'=>'email','value'=>$records[0]->email));
-			echo "</div>";		
-			echo "<br/>";
+						echo form_error('name','<span class="error">','</span>'); 
+						echo form_input(array('id'=>'name','class'=>"form-control",'name'=>'name','value'=>$records[0]->name)); 
+						echo "</div>";	
+						echo "<br/>";
 						echo "<div class='form-group'>";			
-
-			echo form_error('address','<span class="error">','</span>');
-			echo form_input(array('id'=>'address','class'=>"form-control",'name'=>'address','value'=>$records[0]->address));			
-			echo "</div>";
-			echo "<br/>";
-			
-			echo form_submit(array('id'=>'submit','value'=>'Update','class'=>"btn btn-lg btn-success btn-block")); 
-			echo form_close();
-         ?> 	
- </div>
+						echo form_error('email','<span class="error">','</span>'); 
+						echo form_input(array('id'=>'email','class'=>"form-control",'name'=>'email','value'=>$records[0]->email));
+						echo "</div>";		
+						echo "<br/>";
+						echo "<div class='form-group'>";			
+						echo form_error('address','<span class="error">','</span>');
+						echo form_input(array('id'=>'address','class'=>"form-control",'name'=>'address','value'=>$records[0]->address));			
+						echo "</div>";
+						echo "<br/>";
+						echo form_submit(array('id'=>'submit','value'=>'Update','class'=>"btn btn-lg btn-success btn-block")); 
+						echo form_close();
+					 ?> 	
+				<!-- End: Update Contact Page -->
+				</div>
+			</div>
 		</div>
-		</div></div></div></div>
-   <!-- Footer -->
+		</div>
+	</div>
+</div>
+<!-- Start: Footer -->
 <?php $this->load->view('footer'); ?> 
+<!-- End: Footer -->

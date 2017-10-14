@@ -1,21 +1,24 @@
+<!-- Check User Session -->
 <?php
-$user_id=$this->session->userdata('user_id');
-
-if(!$user_id){
-
-  redirect('user/login_view');
-}
+	$user_id=$this->session->userdata('user_id');
+	if(!$user_id){
+	  redirect('user/login_view');
+	}
 ?>
+<!-- Start: Header -->
 <?php $this->load->view('header'); ?>
-  <div id="fh5co-wrapper">
-		<div id="fh5co-page">
+<!-- End: Header -->
+
+ <div id="fh5co-wrapper">
+	<div id="fh5co-page">
+<!-- Start: Menu -->
 		<div id="fh5co-header">
 			<header id="fh5co-header-section">
 				<div class="container">
 					<div class="nav-header">
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 						<h1 id="fh5co-logo"><a href="login.php">DB &nbsp;<span>Fitness</span></a></h1>
-						<!-- START #fh5co-menu-wrap -->
+						
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li class="active">
@@ -30,23 +33,23 @@ if(!$user_id){
 				</div>
 			</header>		
 		</div>
-  <!--<div class="wrapper">
-<span id="usernav"><a href="#">Logout</a> - <a href="#">Settings</a> - <a href="#">My Profile<span><img src="" /></span></a></span>
-</div>-->
-  <!-- end:fh5co-header -->
-		<div class="fh5co-parallax" style="background-image: url(../images/f9.jpeg);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
-						<div class="fh5co-intro fh5co-table-cell animate-box">
-							<h1 class="text-center">Welcome <?php echo $this->session->userdata('user_name'); ?></h1>
-						</div>
+<!-- End: Menu -->
+
+<!-- Start: Welcome Page -->
+	<div class="fh5co-parallax" style="background-image: url(../images/f9.jpeg);" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+					<div class="fh5co-intro fh5co-table-cell animate-box">
+						<h1 class="text-center">Welcome <?php echo $this->session->userdata('user_name'); ?></h1>
 					</div>
 				</div>
 			</div>
-    </div><!-- end: fh5co-parallax -->
-		
+		</div>
+    </div>
+<!-- End: Welcome Page -->
+<!-- Start: Calculate BMI -->
     <div id="fh5co-schedule-section" class="fh5co-lightgray-section">
 			<div class="container">
 				<div class="row">
@@ -72,6 +75,7 @@ if(!$user_id){
 				<div class="row animate-box">
 					<div class="row text-center">
 						<div class="col-md-12 schedule-container">
+						<!-- Start: Scheduled Content -->
 							<div class="schedule-content active" data-day="sunday">
 								<div class="col-md-3 col-sm-6">
 									<div class="program program-schedule">
@@ -118,24 +122,28 @@ if(!$user_id){
 									</div>
 								</div>
 							</div>
-							<!-- END sched-content -->
-						</div>
-			</div>
-		</div>
-		
-		<br>
-		<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<div class="heading-section text-center animate-box">
-							<h2>Video Series</h2>
+							<!-- END scheduled content -->
 						</div>
 					</div>
 				</div>
-				<div style="margin-left:20%;">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/hI8oHhmuWkc" frameborder="0" allowfullscreen></iframe>
+			<br>
+<!-- End: BMI Calculator -->
+
+<!-- Start: iFrame Video -->
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="heading-section text-center animate-box">
+					<h2>Video Series</h2>
 				</div>
+			</div>
+		</div>
+		<div style="margin-left:20%;">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/hI8oHhmuWkc" frameborder="0" allowfullscreen></iframe>
+		</div>
+<!-- End: iFrame Video -->
     </div>
   </div>
 </div>
-<!-- Footer -->
+<!-- Start: Footer -->
 <?php $this->load->view('footer'); ?> 
+<!-- End: Footer -->

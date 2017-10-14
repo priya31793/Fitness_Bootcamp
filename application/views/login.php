@@ -1,6 +1,9 @@
+<!-- Start: Header --> 
 <?php $this->load->view('header'); ?>
+<!-- End: Header --> 
   <div id="fh5co-wrapper">
-		<div id="fh5co-page">
+	<div id="fh5co-page">
+<!-- Start: Menu --> 
 		<div id="fh5co-header">
 			<header id="fh5co-header-section">
 				<div class="container">
@@ -13,7 +16,7 @@
 								<li>
 									<a href="<?=base_url()?>home"><b>Home</b></a>
 								</li>
-								<li><a href="<?=base_url()?>home#contact"><b>Contact</b></a></li>
+								<li><a href="<?=base_url()?>user/login_view#contact"><b>Contact</b></a></li>
 								<li class="active"><a href="<?=base_url()?>user/login_view"><b>Sign in </b></a></li>
 							</ul>
 						</nav>
@@ -21,8 +24,9 @@
 				</div>
 			</header>		
 		</div>
-		<!-- end:fh5co-header -->
-		<div class="fh5co-hero">
+<!-- End: Menu --> 
+<!-- Start: Header Background --> 
+	<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
 			<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image:url('../images/home.jpg');">
 				<div class="desc animate-box">
@@ -39,6 +43,7 @@
 			</div>
 		</div>
 		<br>
+<!-- End: Header Background --> 
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
@@ -48,25 +53,28 @@
                 </div>
                 <div class="panel-body">
 				<div id="body">
-				<?php
-				  $success_msg= $this->session->flashdata('success_msg');
-				  $error_msg= $this->session->flashdata('error_msg');
-				  if($success_msg){
-					?>
-					<div class="alert alert-success">
-					  <?php echo $success_msg; ?>
-					</div>
-				  <?php
-				  }
-				  if($error_msg){
-					?>
-					<div class="alert alert-danger">
-					  <?php echo $error_msg; ?>
-					</div>
+					<!--Start: Form Validation -->
 					<?php
-				}
-				?>	
-                <form role="form" method="post" action="<?php echo base_url('user/login_user'); ?>">
+					  $success_msg= $this->session->flashdata('success_msg');
+					  $error_msg= $this->session->flashdata('error_msg');
+					  if($success_msg){
+					?>
+					  <div class="alert alert-success">
+						  <?php echo $success_msg; ?>
+					  </div>
+					<?php
+					  }
+					  if($error_msg){
+					?>
+					  <div class="alert alert-danger">
+						  <?php echo $error_msg; ?>
+					  </div>
+					<?php
+						}
+					?>	
+					<!--End: Form Validation -->
+					<!--Start: User Login Page -->
+					<form role="form" method="post" action="<?php echo base_url('user/login_user'); ?>">
                         <fieldset>
                             <div class="form-group"  >
 								<?php echo form_error('user_email','<span style="color:red;" class="error">','</span>')?>
@@ -79,14 +87,26 @@
                                 <input class="btn btn-lg btn-success btn-block" type="submit" value="login" name="login" >
                         </fieldset>
                     </form>
-					<center><a href="" data-toggle="modal" data-target="#myModal">Forgot Password</a></center><!--for centered text-->
-					<center><b>Not registered ?</b> <br></b><a href="<?php echo base_url('user'); ?>">Register here</a></center><!--for centered text-->
-                </div>
+					<!-- End: User Login Page --> 
+					
+					<!-- Start: Load Forgot Password --> 
+					<center>
+						<a href="" data-toggle="modal" data-target="#myModal">Forgot Password</a>
+					</center><!--for centered text-->
+					<!-- End: Forgot Password -->
+					
+					<!-- Start: Load Registration Page -->
+					<center><b>Not registered ?</b> <br></b>
+						<a href="<?php echo base_url('user'); ?>">Register here</a>
+					</center><!--for centered text-->
+					<!-- End: Load Registration Page -->
+				</div>
 				</div>
             </div>
         </div>
     </div>
-	</div>
+</div>
+<!-- Start: Forgot Password Popup Page -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -94,13 +114,14 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Reset your password</h4>
       </div>
-      <div class="modal-body">         
+      <div class="modal-body">  
+		<!-- Start: Form Validation & Form Submit -->
         <?php 
 		  echo $this->session->flashdata('message'); 
           echo $this->session->flashdata('msg'); 
           echo form_open('user/ForgotPassword'); 
         ?> 
-	  <table class="table table-bordered table-hover table-striped">                                      
+		<table class="table table-bordered table-hover table-striped">                                      
 			<tbody>
 			<tr>
 			<td>Enter Email: </td>
@@ -112,18 +133,21 @@
 			</td>
 			</tr>
 			</tbody>               
-	  </table>
-      <?php 
-         echo form_close(); 
-      ?> 
+		</table>
+		<?php 
+			echo form_close(); 
+		?> 
         <div id="fade" class="black_overlay"></div>                    
         </div>  
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    
-      </div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	  	<!-- End: Forgot Password Form Submit -->
     </div>
   </div>
 </div>
-<!-- Footer -->
+<!-- End: Forgot Password Popup Page -->
+
+<!-- Start: Footer -->
 <?php $this->load->view('footer'); ?> 
+<!-- End: Footer -->
