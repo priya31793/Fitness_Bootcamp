@@ -1,6 +1,6 @@
 <?php
 	if(isset($_GET['id'])){
-		$url = file_get_contents("http://localhost/week6-master/rest.php?id=".$_GET['id']);
+		$url = file_get_contents("http://localhost/week6/rest.php?id=".$_GET['id']);
 		$var = json_decode($url,true);
 		echo "<table>";
 			foreach($var as $k=>$v)
