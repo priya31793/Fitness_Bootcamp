@@ -14,8 +14,8 @@
 				<div class="col-md-4 animate-box">
 					<h3 class="section-title">Our Address</h3>
 					<ul class="contact-info">
-						<li><i class="icon-map-marker"></i>University of Technology Sydney</li>
-						<li><i class="icon-phone"></i>+ 1235 2355 98</li>
+						<li><i class="icon-map-marker"></i>Jamison Park, South Penrith</li>
+						<li><i class="icon-phone"></i>+61423 392 114</li>
 						<li><i class="icon-envelope"></i>DBfitness1587@gmail.com</li>
 						<li><i class="icon-globe2"></i><a href="#">www.dbfitness.com</a></li>
 					</ul>
