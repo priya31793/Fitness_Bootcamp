@@ -60,7 +60,7 @@
 						<nav id="fh5co-menu-wrap" role="navigation">
 							<ul class="sf-menu" id="fh5co-primary-menu">
 								<li class="active"><a href="<?=base_url()?>user/login_user"></a></li>
-								<li><a href="<?=base_url()?>user/profile.php"><?php echo $this->session->userdata('user_email');  ?></a></li>
+								<li><a href="#"><?php echo $this->session->userdata('user_email');  ?></a></li>
 								<li><a class="btn btn-primary" href="<?php echo base_url('user/user_logout');?>" >  Logout</a>
 								</li>
 							</ul>
@@ -110,9 +110,9 @@
 						echo form_input(array('id'=>'email','class'=>"form-control",'name'=>'email','value'=>$records[0]->email));
 						echo "</div>";		
 						echo "<br/>";
-						echo "<div class='form-group'>";			
+						echo"<div class='form-group' id='locationField'>";
 						echo form_error('address','<span class="error">','</span>');
-						echo form_input(array('id'=>'address','class'=>"form-control",'name'=>'address','value'=>$records[0]->address));			
+						echo form_input(array('id'=>'autocomplete','name'=>'address','type'=>'text','onFocus'=>'geolocate()','value'=>$records[0]->address,'class'=>"form-control"));			
 						echo "</div>";
 						echo "<br/>";
 						echo form_submit(array('id'=>'submit','value'=>'Update','class'=>"btn btn-lg btn-success btn-block")); 
@@ -125,6 +125,39 @@
 		</div>
 	</div>
 </div>
+</div>
+</div>
 <!-- Start: Footer -->
-<?php $this->load->view('footer'); ?> 
+<div class="row copy-right">
+	<div class="col-md-6 col-md-offset-3 text-center">
+		<p class="fh5co-social-icons">
+			<a href="https://twitter.com/dbfitness7"><i class="icon-twitter2"></i></a>
+			<a href="https://www.facebook.com/DBfitness-1662780963766595/?ti=as"><i class="icon-facebook2"></i></a>
+			<a href="#"><i class="icon-instagram"></i></a>
+			<a href="#"><i class="icon-dribbble2"></i></a>
+			<a href="https://www.youtube.com/watch?v=DPhh8voLrC8"><i class="icon-youtube"></i></a>
+		</p>
+		<p>Copyright 2017 <a href="#">DB Fitness</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
+	</div>
+</div>
 <!-- End: Footer -->
+<script src="<?=base_url()?>js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="<?=base_url()?>js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="<?=base_url()?>js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="<?=base_url()?>js/jquery.waypoints.min.js"></script>
+<!-- Stellar -->
+<script src="<?=base_url()?>js/jquery.stellar.min.js"></script>
+<!-- Superfish -->
+<script src="<?=base_url()?>js/hoverIntent.js"></script>
+<script src="<?=base_url()?>js/superfish.js"></script>
+<!-- Main JS  -->
+<script src="<?=base_url()?>js/main.js"></script>
+<!-- Search Box  -->
+<script src="<?=base_url()?>js/search.js"></script>
+<!-- Location Autocomplete -->
+<?php $this->load->view('location'); ?> 
+</body>
+</html>

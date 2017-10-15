@@ -101,7 +101,6 @@ public function login_user()
 		//return the data in view  
 		$this->load->view("login.php");
 	}
-	
 	else if($user_login['user_email'] == "admin@gmail.com")
 	{
 		$this->load->database();  
@@ -117,8 +116,11 @@ public function login_user()
         //return the data in view  
         $this->load->view('admin.php', $data);
 	}
+	else
+	{	
 		//return the data in view 
 		$this->load->view('user_profile.php',$data);
+	}
 }
 
 /* Forgor Password Function */  

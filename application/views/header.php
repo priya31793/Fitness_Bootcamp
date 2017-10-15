@@ -16,6 +16,10 @@
 		<!-- Superfish -->
 		<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/superfish.css">
 		<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/style.css">
+		<!-- admin Page -->
+		<link type="text/css" rel="stylesheet" href="<?=base_url()?>css/admin.css">
+		<!-- Font Awesome icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 		<!-- Modernizr JS -->
 		<script type = 'text/javascript' src = "<?php echo base_url(); ?>js/modernizr-2.6.2.min.js"></script>

@@ -28,7 +28,7 @@
 <!-- Start: Header Background -->
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image:url(<?php echo base_url(); ?>images/home.jpg);">
+			<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image:url(<?php echo base_url(); ?>images/register.jpg);">
 				<div class="desc animate-box">
 					<div class="container">
 						<div class="row">

@@ -72,11 +72,11 @@
 		<div class="row copy-right">
 			<div class="col-md-6 col-md-offset-3 text-center">
 				<p class="fh5co-social-icons">
-					<a href="#"><i class="icon-twitter2"></i></a>
+					<a href="https://twitter.com/dbfitness7"><i class="icon-twitter2"></i></a>
 					<a href="https://www.facebook.com/DBfitness-1662780963766595/?ti=as"><i class="icon-facebook2"></i></a>
 					<a href="#"><i class="icon-instagram"></i></a>
 					<a href="#"><i class="icon-dribbble2"></i></a>
-					<a href="#"><i class="icon-youtube"></i></a>
+					<a href="https://www.youtube.com/watch?v=DPhh8voLrC8"><i class="icon-youtube"></i></a>
 				</p>
 				<p>Copyright 2017 <a href="#">DB Fitness</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
 			</div>
@@ -101,7 +101,9 @@
 <script src="<?=base_url()?>js/superfish.js"></script>
 <!-- Main JS  -->
 <script src="<?=base_url()?>js/main.js"></script>
-<!-- Search box Autocomplete for location -->
-<?php $this->load->view('search'); ?> 
+<!-- Search Box  -->
+<script src="<?=base_url()?>js/search.js"></script>
+<!-- Location Autocomplete -->
+<?php $this->load->view('location'); ?> 
 </body>
 </html>
