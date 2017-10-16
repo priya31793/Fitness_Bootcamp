@@ -47,6 +47,7 @@ Functionality
 9. Location Autocomplete
 10. Edit, Update, Delete Contacts 
 11. Logout 
+12. Restful Webservice by GET Method
 
 *********************
 1. User Registration
@@ -223,6 +224,15 @@ Method Name - user_logout
 View :
 1. Path - localhost/week6(your_folder_name)/application/views/admin.php
 2. Path - localhost/week6(your_folder_name)/application/views/user_profile.php
+
+************************************
+12. Restful Webservice by GET Method
+************************************
+We have added functionality in admin page, where admin can find the contact details based on id. (GET Method).
+
+1. Path - localhost/week6(your_folder_name)/application/rest.php
+2. Path - localhost/week6(your_folder_name)/application/client.php
+
 
 ***************
 Header & Footer
