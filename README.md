@@ -1,11 +1,11 @@
-###################
+*******************
 DB Fitness Project
-###################
+*******************
 We have created a webpage for DB Fitness Bootcamp, The webpage is all about health and fitness. The bootcamp will provide you guidance and support in order to reduce your weight with exciting special offers. In the home page you can find all the information related to DB Fitness Bootcamp such as classes and schedules, what are all the programs available, trainer details, Offers and plans etc. In our project we are following MVC Framework. 
 
-###################
+*******************
 Technology stack
-################### 
+******************* 
 1. Frontend Framework - Codeigniter
 2. Backend Framework - PHP
 3. Database - MySQL
@@ -23,18 +23,18 @@ of the CodeIgniter User Guide.
 4. PHP version 5.6 or newer is recommended.
 5. Selenium IDE
 
-###################
+*******************
 What is CodeIgniter
-###################
+*******************
 
 CodeIgniter is an Application Development Framework - a toolkit - for people
 who build web sites using PHP. It provide a rich set of libraries for commonly needed tasks, as well as a simple
 interface and logical structure to access these libraries. CodeIgniter minimize the amount of code needed
 for a given task.
 
-###################
+*******************
 Functionality
-###################
+*******************
 
 1. User Registration
 2. User Login
@@ -48,9 +48,9 @@ Functionality
 10. Edit, Update, Delete Contacts 
 11. Logout 
 
-
+*********************
 1. User Registration
-####################
+*********************
 
 Initially user have to register with DB Fitness bootcamp by providing their name, email, password, age and mobile number. 
 Refer Files:
@@ -65,8 +65,9 @@ Method Name - register_user
 View:
 Path - localhost/week6(your_folder_name)/application/views/register.php
 
+*******************
 2. User Login
-#############
+*******************
 
 Once user have registered with DB Fitness bootcamp, they can login with their username and password. 
 Refer Files:
@@ -84,8 +85,9 @@ Path - localhost/week6(your_folder_name)/application/views/login.php
 Once user has logged in successfully, they can view the DB Fitness Bootcamp with detailed guidance and support.
 Refer file - localhost/week6(your_folder_name)/application/views/user_profile.php
 
+*****************************************
 3. Forgot Password (Email reset feature)
-########################################
+*****************************************
 
 If the user doesn't know their password, they can click forgot password button, enter their email id and submit. Email will be sent to their mail id with their new password.   
 Refer Files:
@@ -104,8 +106,9 @@ Method Name - ForgotPassword
 View:
 Path - localhost/week6(your_folder_name)/application/views/login.php
 
+*************************
 4. Enquiry/Contact Form
-#######################
+*************************
 
 The user/ new customer can submit an enquiry about fee structure or other details related to DB Fitness.
 Refer Files:
@@ -118,8 +121,9 @@ Method Name - add_contact
 View:
 Path - localhost/week6(your_folder_name)/application/views/home.php
 
+********************
 5. Validation Rules
-###################
+********************
 
 Added validation for User registration, user login, contact/enquiry form, admin login, password & username validations. Based on the validation condition, user can login. If the validation fails a error message will popup. 
 Refer Files:
@@ -137,16 +141,18 @@ View:
 3. localhost/week6(your_folder_name)/application/views/register.php
 4. localhost/week6(your_folder_name)/application/views/footer.php
 
+******************
 6. Google Map API
-#################
+******************
 
 Added Google Map API based on Address in the home page.
 Refer Files:
 View:
 1. localhost/week6(your_folder_name)/application/views/home.php
 
+*************
 7. Admin Page
-#############
+*************
 
 We have seperate admin page to review the customer complaints and customer personal details. Admin will have the rights to edit, update and delete the user contacts.
 Refer Files:
@@ -164,8 +170,9 @@ Method Name -
 View:
 1. localhost/week6(your_folder_name)/application/views/footer.php
 
+**********
 8.Search
-#############
+**********
 
 Added search functionality in admin page, where admin can easily filter the user details based on the name.
 View:
@@ -173,16 +180,18 @@ View:
 CSS - localhost/week6(your_folder_name)/css/admin.css
 JS - localhost/week6(your_folder_name)/js/search.js
 
+*************************
 9. Location Autocomplete
-########################
+*************************
 
 Added auto suggest location functionality when user type their address.
 View:
 1. localhost/week6(your_folder_name)/application/views/footer.php
 2. localhost/week6(your_folder_name)/application/views/location.php
 
+*******************************
 10. Edit/Update/Delete Contacts
-###############################
+*******************************
 
 Admin user will have the rights to edit, update and delete the user contact details and feedbacks.
 Refer Files:
@@ -203,8 +212,9 @@ Method Name -
 View:
 1. Path - localhost/week6(your_folder_name)/application/views/admin.php
 
+***********
 11. Logout
-##########
+***********
 
 We have added logout functionality for both user and admin.
 Controller:
@@ -214,18 +224,18 @@ View :
 1. Path - localhost/week6(your_folder_name)/application/views/admin.php
 2. Path - localhost/week6(your_folder_name)/application/views/user_profile.php
 
-###############
+***************
 Header & Footer
-###############
+***************
 
 Added all the css and javascript files in header and footer.
 View:
 Header Path - localhost/week6(your_folder_name)/application/views/header.php
 Footer Path - localhost/week6(your_folder_name)/application/views/footer.php
 
-############
+************
 Database
-############
+************
 
 Created a database for storing user and contacts details in MySQL.
 Steps:
@@ -240,9 +250,9 @@ Enter below details:
 'password' => '',
 'database' => 'test',
 
-#############
+**************
 Configuration
-#############
+**************
 
 Open week6 folder(your_folder_name)/application/config/config.php
 Open config.php and change it to your folder name
