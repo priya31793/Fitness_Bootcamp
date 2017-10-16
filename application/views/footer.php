@@ -14,8 +14,8 @@
 				<div class="col-md-4 animate-box">
 					<h3 class="section-title">Our Address</h3>
 					<ul class="contact-info">
-						<li><i class="icon-map-marker"></i>Jamison Park, South Penrith</li>
-						<li><i class="icon-phone"></i>+61423 392 114</li>
+						<li><i class="icon-map-marker"></i>University of Technology Sydney</li>
+						<li><i class="icon-phone"></i>+ 1235 2355 98</li>
 						<li><i class="icon-envelope"></i>DBfitness1587@gmail.com</li>
 						<li><i class="icon-globe2"></i><a href="#">www.dbfitness.com</a></li>
 					</ul>
@@ -76,7 +76,7 @@
 					<a href="https://www.facebook.com/DBfitness-1662780963766595/?ti=as"><i class="icon-facebook2"></i></a>
 					<a href="#"><i class="icon-instagram"></i></a>
 					<a href="#"><i class="icon-dribbble2"></i></a>
-					<a href="https://www.youtube.com/user/bodybuildingcomvideo"><i class="icon-youtube"></i></a>
+					<a href="https://www.youtube.com/watch?v=DPhh8voLrC8"><i class="icon-youtube"></i></a>
 				</p>
 				<p>Copyright 2017 <a href="#">DB Fitness</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://uts.com/" target="_blank">UTS Student</a> </p>
 			</div>
