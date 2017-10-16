@@ -43,7 +43,7 @@ Functionality
 5. Validation Rules
 6. Google Map API
 7. Admin Page 
-8. Search 
+8. Ajax Auto Search 
 9. Location Autocomplete
 10. Edit, Update, Delete Contacts 
 11. Logout 
