@@ -32,6 +32,56 @@ who build web sites using PHP. It provide a rich set of libraries for commonly n
 interface and logical structure to access these libraries. CodeIgniter minimize the amount of code needed
 for a given task.
 
+**************
+File Structure
+**************
+
+Week6:
+	-->application
+	-->system
+	-->assets
+	-->.htaccess
+	-->index
+	-->Readme
+	-->user.sql
+	-->contact.sql
+	
+Download the source code from Github and extract the week6 folder to xampp server.(C:\xampp\htdocs\week6)
+
+************
+Database
+************
+
+Created a database for storing user and contacts details in MySQL.
+
+Steps:
+1. Open PHPMyadmin - http://localhost/phpmyadmin
+2. Create a new DB called "test"
+3. Import user.sql & contact.sql (localhost/week6(your_folder_name)/user.sql)
+
+Path - htdocs/week6/application/config/database.php
+
+Enter below details:
+'hostname' => 'localhost',
+'username' => 'root',
+'password' => '',
+'database' => 'test',
+
+**************
+Configuration
+**************
+
+Open week6 folder(your_folder_name)/application/config/config.php
+Open config.php and change it to your folder name
+$config['base_url'] = 'http://localhost/week6/';
+
+Routes:
+week6 folder(your_folder_name)/application/config/route.php
+1. Add your initial loading page as your default route. I have added home.php as my default route.
+$route['default_controller'] = 'home';
+2. When user clicks the home page, the route will navigate to controller (User.php) and it will render the view page.
+$route['home'] = 'user/home';
+
 *******************
 Functionality
 *******************
@@ -243,37 +293,7 @@ View:
 Header Path - localhost/week6(your_folder_name)/application/views/header.php
 Footer Path - localhost/week6(your_folder_name)/application/views/footer.php
 
-************
-Database
-************
 
-Created a database for storing user and contacts details in MySQL.
-Steps:
-Open PHPMyadmin - http://localhost/phpmyadmin
-Create a new DB called "test"
-Import user.sql & contact.sql (localhost/week6(your_folder_name)/user.sql)
-
-Path - htdocs/week6/application/config/database.php
-Enter below details:
-'hostname' => 'localhost',
-'username' => 'root',
-'password' => '',
-'database' => 'test',
-
-**************
-Configuration
-**************
-
-Open week6 folder(your_folder_name)/application/config/config.php
-Open config.php and change it to your folder name
-$config['base_url'] = 'http://localhost/week6/';
-
-Routes:
-week6 folder(your_folder_name)/application/config/route.php
-1. Add your initial loading page as your default route. I have added home.php as my default route.
-$route['default_controller'] = 'home';
-2. When user clicks the home page, the route will navigate to controller (User.php) and it will render the view page.
-$route['home'] = 'user/home';
  
 
 
